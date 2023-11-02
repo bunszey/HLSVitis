@@ -60,8 +60,6 @@
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/lars/Documents/MPsocGroup/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -96,8 +94,6 @@
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/lars/Documents/MPsocGroup/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -163,7 +159,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -232,8 +228,6 @@
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/lars/Documents/MPsocGroup/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -258,8 +252,6 @@
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
                                     <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/lars/Documents/MPsocGroup/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -315,7 +307,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding=".apc|.settings|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        <entry excluding=".apc|.settings|solution1|*.c*|*.C*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
