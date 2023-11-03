@@ -4,8 +4,8 @@
 # 375 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
-# 158 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 1 "/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 158 "/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -151,8 +151,8 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "../inverter_hls.cpp" 2
-# 1 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
-# 63 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 3
+# 1 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
+# 63 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 3
 # 1 "/usr/include/stdint.h" 1 3 4
 # 26 "/usr/include/stdint.h" 3 4
 # 1 "/usr/include/bits/libc-header-start.h" 1 3 4
@@ -369,13 +369,13 @@ typedef unsigned long int uintptr_t;
 # 101 "/usr/include/stdint.h" 3 4
 typedef __intmax_t intmax_t;
 typedef __uintmax_t uintmax_t;
-# 64 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 2 3
+# 64 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 2 3
 # 2 "../inverter_hls.cpp" 2
 
 
 
 
-__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile int in_r[307200], volatile int out_r[307200]) {_ssdm_SpecArrayDimSize(in_r, 307200);_ssdm_SpecArrayDimSize(out_r, 307200);
+__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile int in_r[76800], volatile int out_r[76800]) {_ssdm_SpecArrayDimSize(in_r, 76800);_ssdm_SpecArrayDimSize(out_r, 76800);
 #pragma HLS TOP name=inverter
 # 6 "../inverter_hls.cpp"
 
@@ -386,9 +386,22 @@ __attribute__((sdx_kernel("inverter", 0))) void inverter(volatile int in_r[30720
 
 
 
- VITIS_LOOP_14_1: for (int i = 0; i < 307200; i++) {
 
-        out_r[i] = 255 - in_r[i];
+
+ int i, j;
+
+    VITIS_LOOP_18_1: for (i = 0; i < 76800; ++i) {
+#pragma HLS PIPELINE
+ int temp = in_r[i];
+
+     unsigned char* bytes = (unsigned char*)&temp;
+
+     VITIS_LOOP_24_2: for(j = 0; j < 4; ++j){
+#pragma HLS UNROLL factor=4
+ bytes[j] = 255 - bytes[j];
+     }
+
+        out_r[i] = temp;
     }
 
 }

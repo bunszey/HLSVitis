@@ -1,4 +1,3 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../../inverter_hls_tb.cpp in debug mode
-   Generating csim.exe
+make: 'csim.exe' is up to date.

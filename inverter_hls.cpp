@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#define DATA_SIZE 307200
+#define DATA_SIZE 76800 //640x480=307200bytes /4bytesprword = 76800
 
 // Function to perform vector addition
 void inverter(volatile int in_r[DATA_SIZE], volatile int out_r[DATA_SIZE]) {
@@ -10,10 +10,23 @@ void inverter(volatile int in_r[DATA_SIZE], volatile int out_r[DATA_SIZE]) {
     //#pragma HLS INTERFACE s_axilite port=in_r bundle=AXI_CPU
     //#pragma HLS INTERFACE s_axilite port=out_r bundle=AXI_CPU
 
+
+
     // Add the vectors
-    for (int i = 0; i < DATA_SIZE; i++) {
-		//#pragma HLS UNROLL factor=4
-        out_r[i] = 255 - in_r[i];
+	int i, j;
+
+    for (i = 0; i < DATA_SIZE; ++i) {
+		#pragma HLS PIPELINE
+    	int temp = in_r[i];
+
+    	unsigned char* bytes = (unsigned char*)&temp;
+
+    	for(j = 0; j < 4; ++j){
+    		#pragma HLS UNROLL factor=4
+    		bytes[j] = 255 - bytes[j];
+    	}
+
+        out_r[i] = temp;
     }
 
 }

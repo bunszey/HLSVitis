@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xczu3eg:-sbva484:-1-e
 set SourceFiles {sc {} c ../../../inverter_hls.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/Inverter/solution1/solution1.directive
+set DirectiveFile /home/lars/Documents/MPsocGroup/HLSVitis/Project/Inverter/solution1/solution1.directive
 set TBFiles {verilog ../../../inverter_hls_tb.cpp bc ../../../inverter_hls_tb.cpp vhdl ../../../inverter_hls_tb.cpp sc ../../../inverter_hls_tb.cpp cas ../../../inverter_hls_tb.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

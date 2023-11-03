@@ -36,10 +36,10 @@ extern "C" void inverter(int*, int*);
 extern "C" void apatb_inverter_hw(volatile void * __xlx_apatb_param_in_r, volatile void * __xlx_apatb_param_out_r) {
   // Collect __xlx_in_r__tmp_vec
   vector<sc_bv<32> >__xlx_in_r__tmp_vec;
-  for (int j = 0, e = 307200; j != e; ++j) {
+  for (int j = 0, e = 76800; j != e; ++j) {
     __xlx_in_r__tmp_vec.push_back(((int*)__xlx_apatb_param_in_r)[j]);
   }
-  int __xlx_size_param_in_r = 307200;
+  int __xlx_size_param_in_r = 76800;
   int __xlx_offset_param_in_r = 0;
   int __xlx_offset_byte_param_in_r = 0*4;
   int* __xlx_in_r__input_buffer= new int[__xlx_in_r__tmp_vec.size()];
@@ -48,10 +48,10 @@ extern "C" void apatb_inverter_hw(volatile void * __xlx_apatb_param_in_r, volati
   }
   // Collect __xlx_out_r__tmp_vec
   vector<sc_bv<32> >__xlx_out_r__tmp_vec;
-  for (int j = 0, e = 307200; j != e; ++j) {
+  for (int j = 0, e = 76800; j != e; ++j) {
     __xlx_out_r__tmp_vec.push_back(((int*)__xlx_apatb_param_out_r)[j]);
   }
-  int __xlx_size_param_out_r = 307200;
+  int __xlx_size_param_out_r = 76800;
   int __xlx_offset_param_out_r = 0;
   int __xlx_offset_byte_param_out_r = 0*4;
   int* __xlx_out_r__input_buffer= new int[__xlx_out_r__tmp_vec.size()];
