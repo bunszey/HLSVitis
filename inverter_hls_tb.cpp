@@ -4,7 +4,7 @@
 
 #define ARRAY_LENGTH 307200
 
-void inverter(volatile unsigned char in_r[ARRAY_LENGTH], volatile unsigned char out_r[ARRAY_LENGTH]);
+void inverter(volatile int in_r[ARRAY_LENGTH], volatile int out_r[ARRAY_LENGTH]);
 
 int main() {
     int a = 1 ;
@@ -12,9 +12,9 @@ int main() {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
     // Initialize input arrays and expected output array
-    volatile unsigned char in[ARRAY_LENGTH];
-    volatile unsigned char expected_out[ARRAY_LENGTH];
-    volatile unsigned char actual_out[ARRAY_LENGTH];
+    volatile int in[ARRAY_LENGTH];
+    volatile int expected_out[ARRAY_LENGTH];
+    volatile int actual_out[ARRAY_LENGTH];
 
     // Populate input arrays with random data
     for (int i = 0; i < ARRAY_LENGTH; i++) {

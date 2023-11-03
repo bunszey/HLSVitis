@@ -3,7 +3,7 @@
 #define DATA_SIZE 307200
 
 // Function to perform vector addition
-void inverter(volatile unsigned char in_r[DATA_SIZE], volatile unsigned char out_r[DATA_SIZE]) {
+void inverter(volatile int in_r[DATA_SIZE], volatile int out_r[DATA_SIZE]) {
     #pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
 	#pragma HLS INTERFACE bram port=in_r
 	#pragma HLS INTERFACE bram port=out_r
@@ -12,7 +12,7 @@ void inverter(volatile unsigned char in_r[DATA_SIZE], volatile unsigned char out
 
     // Add the vectors
     for (int i = 0; i < DATA_SIZE; i++) {
-		#pragma HLS UNROLL factor=4
+		//#pragma HLS UNROLL factor=4
         out_r[i] = 255 - in_r[i];
     }
 

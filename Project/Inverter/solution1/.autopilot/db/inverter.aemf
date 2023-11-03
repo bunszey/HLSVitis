@@ -1,303 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698972715596">
-  <ports id="1" name="in_r" type="PortType" coreName="RAM" coreId="4294967295" bitwidth="8" iftype="IfTypeRegister" arraysize="307200">
-    <dataOutputObjs>getelementptr</dataOutputObjs>
-    <dataOutputObjs>getelementptr</dataOutputObjs>
-    <dataOutputObjs>getelementptr</dataOutputObjs>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1698973390447">
+  <ports id="1" name="in_r" type="PortType" coreName="RAM" coreId="274824704" bitwidth="32" iftype="IfTypeRegister" arraysize="307200">
     <dataOutputObjs>getelementptr</dataOutputObjs>
   </ports>
-  <ports id="2" name="out_r" type="PortType" coreName="RAM" coreId="257" bitwidth="8" direction="DirOut" iftype="IfTypeRegister" arraysize="307200">
-    <dataInputObjs>getelementptr</dataInputObjs>
-    <dataInputObjs>getelementptr</dataInputObjs>
-    <dataInputObjs>getelementptr</dataInputObjs>
+  <ports id="2" name="out_r" type="PortType" coreName="RAM" coreId="274815832" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="307200">
     <dataInputObjs>getelementptr</dataInputObjs>
   </ports>
-  <edges id="50" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
-  <edges id="51" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="52" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
-  <edges id="55" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
-  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
-  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="60" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="61" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
-  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
-  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
-  <edges id="66" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
-  <edges id="70" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
-  <edges id="71" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
-  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.1"/>
-  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
-  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
-  <edges id="78" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
-  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
-  <edges id="82" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
-  <edges id="83" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
-  <edges id="85" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
-  <edges id="86" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
-  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
-  <edges id="89" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@ports.1"/>
-  <edges id="91" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
-  <edges id="92" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
-  <edges id="93" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
-  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
-  <edges id="97" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
-  <edges id="98" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
-  <edges id="100" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
-  <edges id="101" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
-  <edges id="102" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
-  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@ports.1"/>
-  <edges id="106" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
-  <edges id="107" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
-  <edges id="108" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
-  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
-  <edges id="112" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
-  <edges id="113" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
-  <edges id="115" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
-  <edges id="116" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
-  <edges id="117" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
-  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@ports.1"/>
-  <edges id="121" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
-  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
-  <edges id="123" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
-  <edges id="124" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
-  <edges id="217" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
-  <edges id="218" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
-  <edges id="219" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
-  <edges id="220" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="29" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="30" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="31" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="34" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="35" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="38" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="41" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="42" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="43" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="44" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="45" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="48" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="49" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="52" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.1"/>
+  <edges id="55" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="57" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="58" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="151" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
   <blocks id="10" name="block_10" type="BlockType">
     <controlOutputObjs>phi</controlOutputObjs>
-    <controlOutputObjs>block_16</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="inverter" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="1" m_clusterGroupNumber="-1">
+    <controlOutputObjs>block_17</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="br_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="8" contextFuncName="inverter" opcode="br" m_display="0" m_delay="0.48" m_topoIndex="1" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-      <controlInputObjs>block_16</controlInputObjs>
+      <controlInputObjs>block_17</controlInputObjs>
     </node_objs>
     <fileValidLineNumbers fileName="../inverter_hls.cpp">
       <validLinenumbers>14</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <blocks id="49" name="block_49" type="BlockType">
-    <controlInputObjs>block_16</controlInputObjs>
+  <blocks id="28" name="block_28" type="BlockType">
+    <controlInputObjs>block_17</controlInputObjs>
     <controlOutputObjs>br</controlOutputObjs>
-    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="_ln19" lineNumber="19" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="4294967292" contextFuncName="inverter" opcode="ret" nodeLabel="4.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="_ln19" lineNumber="19" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="775174449" contextFuncName="inverter" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
       <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="19" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
     </node_objs>
     <fileValidLineNumbers fileName="../inverter_hls.cpp">
       <validLinenumbers>19</validLinenumbers>
     </fileValidLineNumbers>
   </blocks>
-  <regions anchor_node="-1" region_type="8" interval="2" typeName="Pipeline" id="183" pipe_depth="3" RegionName="VITIS_LOOP_14_1">
-    <basic_blocks id="16" name="block_16" type="BlockType">
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" id="91" pipe_depth="2" RegionName="VITIS_LOOP_14_1">
+    <basic_blocks id="17" name="block_17" type="BlockType">
       <controlInputObjs>block_10</controlInputObjs>
       <controlInputObjs>.split</controlInputObjs>
       <controlOutputObjs>br</controlOutputObjs>
       <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_28</controlOutputObjs>
       <controlOutputObjs>.split</controlOutputObjs>
-      <controlOutputObjs>block_49</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i" lineNumber="14" originalName="i" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="132" contextFuncName="inverter" bitwidth="19" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i" lineNumber="14" originalName="i" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="274823496" contextFuncName="inverter" bitwidth="19" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>add</dataInputObjs>
-        <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
         <dataOutputObjs>zext</dataOutputObjs>
-        <dataOutputObjs>or</dataOutputObjs>
-        <dataOutputObjs>or</dataOutputObjs>
-        <dataOutputObjs>or</dataOutputObjs>
         <controlInputObjs>.split</controlInputObjs>
         <controlInputObjs>block_10</controlInputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="icmp_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="icmp_ln14_fu_162_p2" opType="icmp" coreId="0" contextFuncName="inverter" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.91" m_topoIndex="3" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>br</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="br_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="1936942413" contextFuncName="inverter" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>icmp</dataInputObjs>
-        <controlInputObjs>block_49</controlInputObjs>
-        <controlInputObjs>.split</controlInputObjs>
-      </node_objs>
-      <fileValidLineNumbers fileName="../inverter_hls.cpp">
-        <validLinenumbers>14</validLinenumbers>
-      </fileValidLineNumbers>
-    </basic_blocks>
-    <basic_blocks id="47" name=".split" type="BlockType">
-      <controlInputObjs>block_16</controlInputObjs>
-      <controlOutputObjs>phi</controlOutputObjs>
-      <controlOutputObjs>br</controlOutputObjs>
-      <controlOutputObjs>block_16</controlOutputObjs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="add_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="add_ln14_fu_184_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="inverter" bitwidth="19" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.05" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="add_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="add_ln14_fu_85_p2" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="inverter" bitwidth="19" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.05" m_topoIndex="3" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>phi</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_cast1" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="i_cast1_fu_168_p1" coreId="0" contextFuncName="inverter" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="icmp_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="icmp_ln14_fu_91_p2" opType="icmp" coreId="0" contextFuncName="inverter" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="0.91" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="br_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="inverter" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>.split</controlInputObjs>
+        <controlInputObjs>block_28</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="../inverter_hls.cpp">
+        <validLinenumbers>14</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="26" name=".split" type="BlockType">
+      <controlInputObjs>block_17</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_17</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="i_cast" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="i_cast_fu_97_p1" coreId="49" contextFuncName="inverter" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>phi</dataInputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
         <dataOutputObjs>getelementptr</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="in_r_addr" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="in_r_addr" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="790766141" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>in_r</dataInputObjs>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>load</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="in_r_load" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="in_r_load" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="8" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>getelementptr</dataInputObjs>
-        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="xor_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="out_r_Din_B" opType="xor" coreId="402653312" contextFuncName="inverter" bitwidth="8" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.38" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="sub_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="out_r_Din_A" coreName="Adder" implIndex="fabric" control="auto" opType="sub" coreId="1" contextFuncName="inverter" bitwidth="32" opcode="sub" nodeLabel="2.0" m_display="0" m_delay="1.2" m_topoIndex="9" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>load</dataInputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="out_r_addr" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="out_r_addr" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
         <dataInputObjs>zext</dataInputObjs>
         <dataOutputObjs>out_r</dataOutputObjs>
         <dataOutputObjs>store</dataOutputObjs>
         <constName>empty</constName>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="out_r_addr_write_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.35" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="out_r_addr_write_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.35" m_topoIndex="11" m_clusterGroupNumber="-1">
         <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>xor</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
         <dataInputObjs>getelementptr</dataInputObjs>
       </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="or_ln14" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="or_ln14_fu_173_p2" coreId="132" contextFuncName="inverter" bitwidth="19" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="zext_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="zext_ln16_fu_179_p1" coreId="539119430" contextFuncName="inverter" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>or</dataInputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="in_r_addr_1" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="1043276322" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>in_r</dataInputObjs>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>load</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="in_r_load_1" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" bitwidth="8" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="11" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>getelementptr</dataInputObjs>
-        <dataOutputObjs>xor</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="xor_ln16_1" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="out_r_Din_A" opType="xor" coreId="808542035" contextFuncName="inverter" bitwidth="8" opcode="xor" nodeLabel="2.0" m_display="0" m_delay="0.38" m_topoIndex="16" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="out_r_addr_1" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="742093679" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>out_r</dataOutputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="out_r_addr_1_write_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.35" m_topoIndex="18" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>xor</dataInputObjs>
-        <dataInputObjs>getelementptr</dataInputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="or_ln14_1" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="or_ln14_1_fu_190_p2" coreId="540553262" contextFuncName="inverter" bitwidth="19" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="zext_ln16_1" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="zext_ln16_1_fu_196_p1" coreId="979725673" contextFuncName="inverter" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>or</dataInputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="in_r_addr_2" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="1936028192" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>in_r</dataInputObjs>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>load</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="in_r_load_2" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" bitwidth="8" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="1" m_delay="1.35" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="22" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>getelementptr</dataInputObjs>
-        <dataOutputObjs>xor</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="xor_ln16_2" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="out_r_Din_B" opType="xor" coreId="0" contextFuncName="inverter" bitwidth="8" opcode="xor" nodeLabel="3.0" m_display="0" m_delay="0.38" m_topoIndex="27" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="out_r_addr_2" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="4071539" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>out_r</dataOutputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="out_r_addr_2_write_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="29" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>xor</dataInputObjs>
-        <dataInputObjs>getelementptr</dataInputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="or_ln14_2" lineNumber="14" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="or_ln14_2_fu_201_p2" coreId="49" contextFuncName="inverter" bitwidth="19" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="14" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>phi</dataInputObjs>
-        <dataOutputObjs>zext</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="zext_ln16_2" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="zext_ln16_2_fu_207_p1" coreId="6" contextFuncName="inverter" bitwidth="64" opcode="zext" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>or</dataInputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-        <dataOutputObjs>getelementptr</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="in_r_addr_3" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="0" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>in_r</dataInputObjs>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>load</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="in_r_load_3" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" bitwidth="8" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="1.35" m_topoIndex="26" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>getelementptr</dataInputObjs>
-        <dataOutputObjs>xor</dataOutputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="xor_ln16_3" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." rtlName="out_r_Din_A" opType="xor" coreId="926167341" contextFuncName="inverter" bitwidth="8" opcode="xor" nodeLabel="3.0" m_display="0" m_delay="0.38" m_topoIndex="30" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>load</dataInputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="out_r_addr_3" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreId="49" contextFuncName="inverter" bitwidth="19" opcode="getelementptr" nodeLabel="3.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>zext</dataInputObjs>
-        <dataOutputObjs>out_r</dataOutputObjs>
-        <dataOutputObjs>store</dataOutputObjs>
-        <constName>empty</constName>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="out_r_addr_3_write_ln16" lineNumber="16" fileName="../inverter_hls.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="auto" opType="ram" coreId="83" contextFuncName="inverter" opcode="store" nodeLabel="3.0" m_display="0" m_delay="1.35" m_topoIndex="32" m_clusterGroupNumber="-1">
-        <inlineStackInfo fileName="../inverter_hls.cpp" linenumber="16" fileDirectory="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project" functionName="inverter"/>
-        <dataInputObjs>xor</dataInputObjs>
-        <dataInputObjs>getelementptr</dataInputObjs>
-      </node_objs>
-      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="br_ln0" coreId="4294967292" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
-        <controlInputObjs>block_16</controlInputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="br_ln0" coreId="49" opcode="br" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <controlInputObjs>block_17</controlInputObjs>
       </node_objs>
       <fileValidLineNumbers fileName="../inverter_hls.cpp">
         <validLinenumbers>14</validLinenumbers>
@@ -309,140 +144,56 @@
   <ScheduleInfo time="1"/>
   <ScheduleInfo time="2"/>
   <ScheduleInfo time="3"/>
-  <ScheduleInfo time="4"/>
-  <regnodes realName="in_r_addr_2_reg_246">
-    <nodeIds>34</nodeIds>
+  <regnodes realName="icmp_ln14_reg_114">
+    <nodeIds>14</nodeIds>
   </regnodes>
-  <regnodes realName="in_r_addr_reg_221">
-    <nodeIds>20</nodeIds>
-  </regnodes>
-  <regnodes realName="add_ln14_reg_236">
-    <nodeIds>17</nodeIds>
-  </regnodes>
-  <regnodes realName="in_r_addr_1_reg_231">
-    <nodeIds>27</nodeIds>
-  </regnodes>
-  <regnodes realName="zext_ln16_2_reg_251">
-    <nodeIds>40</nodeIds>
-  </regnodes>
-  <regnodes realName="i_cast1_reg_216">
+  <regnodes realName="i_cast_reg_118">
     <nodeIds>18</nodeIds>
   </regnodes>
-  <regnodes realName="zext_ln16_1_reg_241">
-    <nodeIds>33</nodeIds>
+  <regnodes realName="add_ln14_reg_109">
+    <nodeIds>12</nodeIds>
   </regnodes>
-  <regnodes realName="i_reg_136">
+  <regnodes realName="i_reg_74">
     <nodeIds>11</nodeIds>
   </regnodes>
-  <regnodes realName="icmp_ln14_reg_212">
-    <nodeIds>13</nodeIds>
-  </regnodes>
-  <regnodes realName="in_r_addr_3_reg_256">
-    <nodeIds>41</nodeIds>
-  </regnodes>
-  <regnodes realName="zext_ln16_reg_226">
-    <nodeIds>26</nodeIds>
-  </regnodes>
-  <expressionNodes realName="i_cast1_fu_168">
-    <nodeIds>18</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="i_phi_fu_140">
-    <nodeIds>11</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="in_r_addr_gep_fu_54">
+  <regnodes realName="in_r_addr_reg_123">
     <nodeIds>20</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="icmp_ln14_fu_162">
-    <nodeIds>13</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="in_r_addr_3_gep_fu_112">
-    <nodeIds>41</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="or_ln14_2_fu_201">
-    <nodeIds>39</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="add_ln14_fu_184">
-    <nodeIds>17</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="out_r_addr_1_gep_fu_96">
-    <nodeIds>30</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="out_r_addr_2_gep_fu_120">
-    <nodeIds>37</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln16_2_fu_207">
-    <nodeIds>40</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="or_ln14_1_fu_190">
-    <nodeIds>32</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="out_r_addr_3_gep_fu_128">
-    <nodeIds>44</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="or_ln14_fu_173">
-    <nodeIds>25</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln16_1_fu_196">
-    <nodeIds>33</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="in_r_addr_2_gep_fu_104">
-    <nodeIds>34</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="zext_ln16_fu_179">
-    <nodeIds>26</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="grp_fu_148">
-    <nodeIds>22</nodeIds>
-    <nodeIds>36</nodeIds>
-  </expressionNodes>
-  <expressionNodes realName="out_r_addr_gep_fu_79">
+  </regnodes>
+  <expressionNodes realName="out_r_addr_gep_fu_61">
     <nodeIds>23</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="in_r_addr_1_gep_fu_71">
-    <nodeIds>27</nodeIds>
+  <expressionNodes realName="icmp_ln14_fu_91">
+    <nodeIds>14</nodeIds>
   </expressionNodes>
-  <expressionNodes realName="grp_fu_155">
-    <nodeIds>29</nodeIds>
-    <nodeIds>43</nodeIds>
+  <expressionNodes realName="i_phi_fu_78">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="in_r_addr_gep_fu_48">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln16_fu_102">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln14_fu_85">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_fu_97">
+    <nodeIds>18</nodeIds>
   </expressionNodes>
   <memoryPorts dataString="in_r">
-    <nodeIds>28</nodeIds>
-    <nodeIds>42</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="in_r" portID="1">
     <nodeIds>21</nodeIds>
-    <nodeIds>35</nodeIds>
   </memoryPorts>
   <memoryPorts dataString="out_r">
-    <nodeIds>31</nodeIds>
-    <nodeIds>45</nodeIds>
-  </memoryPorts>
-  <memoryPorts dataString="out_r" portID="1">
     <nodeIds>24</nodeIds>
-    <nodeIds>38</nodeIds>
   </memoryPorts>
   <ioPorts name="in_r(p0)">
     <contents name="load">
-      <nodeIds>28</nodeIds>
-      <nodeIds>42</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="in_r(p1)">
-    <contents name="load">
       <nodeIds>21</nodeIds>
-      <nodeIds>35</nodeIds>
     </contents>
   </ioPorts>
   <ioPorts name="out_r(p0)">
     <contents name="store">
-      <nodeIds>31</nodeIds>
-      <nodeIds>45</nodeIds>
-    </contents>
-  </ioPorts>
-  <ioPorts name="out_r(p1)">
-    <contents name="store">
       <nodeIds>24</nodeIds>
-      <nodeIds>38</nodeIds>
     </contents>
   </ioPorts>
   <fsm>
@@ -461,58 +212,29 @@
       <operations id="13" stage="1" latency="1"/>
       <operations id="14" stage="1" latency="1"/>
       <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
       <operations id="18" stage="1" latency="1"/>
       <operations id="20" stage="1" latency="1"/>
       <operations id="21" stage="2" latency="2"/>
-      <operations id="25" stage="1" latency="1"/>
-      <operations id="26" stage="1" latency="1"/>
-      <operations id="27" stage="1" latency="1"/>
-      <operations id="28" stage="2" latency="2"/>
     </states>
     <states id="3">
-      <operations id="17" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
       <operations id="21" stage="1" latency="2"/>
       <operations id="22" stage="1" latency="1"/>
       <operations id="23" stage="1" latency="1"/>
       <operations id="24" stage="1" latency="1"/>
-      <operations id="28" stage="1" latency="2"/>
-      <operations id="29" stage="1" latency="1"/>
-      <operations id="30" stage="1" latency="1"/>
-      <operations id="31" stage="1" latency="1"/>
-      <operations id="32" stage="1" latency="1"/>
-      <operations id="33" stage="1" latency="1"/>
-      <operations id="34" stage="1" latency="1"/>
-      <operations id="35" stage="2" latency="2"/>
-      <operations id="39" stage="1" latency="1"/>
-      <operations id="40" stage="1" latency="1"/>
-      <operations id="41" stage="1" latency="1"/>
-      <operations id="42" stage="2" latency="2"/>
+      <operations id="25" stage="1" latency="1"/>
     </states>
     <states id="4">
-      <operations id="19" stage="1" latency="1"/>
-      <operations id="35" stage="1" latency="2"/>
-      <operations id="36" stage="1" latency="1"/>
-      <operations id="37" stage="1" latency="1"/>
-      <operations id="38" stage="1" latency="1"/>
-      <operations id="42" stage="1" latency="2"/>
-      <operations id="43" stage="1" latency="1"/>
-      <operations id="44" stage="1" latency="1"/>
-      <operations id="45" stage="1" latency="1"/>
-      <operations id="46" stage="1" latency="1"/>
-    </states>
-    <states id="5">
-      <operations id="48" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
     </states>
     <transitions inState="1" outState="2">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="3" outState="4">
+    <transitions inState="3" outState="2">
       <condition id="-1"/>
     </transitions>
-    <transitions inState="4" outState="2">
-      <condition id="-1"/>
-    </transitions>
-    <transitions inState="2" outState="5">
+    <transitions inState="2" outState="4">
       <condition id="-1"/>
     </transitions>
     <transitions inState="2" outState="3">
@@ -520,7 +242,7 @@
     </transitions>
   </fsm>
   <CFGRegionsRoot>
-    <cfgRegions mId="1" mTag="inverter" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="153602" mMaxLatency="153602">
+    <cfgRegions mId="1" mTag="inverter" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="307202" mMaxLatency="307202">
       <subRegions>2</subRegions>
       <subRegions>3</subRegions>
       <subRegions>4</subRegions>
@@ -530,13 +252,13 @@
       <basicBlocks>10</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
-    <cfgRegions mId="3" mTag="VITIS_LOOP_14_1" mII="2" mDepth="3" mMinTripCount="76800" mMaxTripCount="76800" mMinLatency="153600" mMaxLatency="153600" mType="1">
-      <basicBlocks>16</basicBlocks>
-      <basicBlocks>47</basicBlocks>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_14_1" mII="1" mDepth="2" mMinTripCount="307200" mMaxTripCount="307200" mMinLatency="307200" mMaxLatency="307200" mType="1">
+      <basicBlocks>17</basicBlocks>
+      <basicBlocks>26</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
     <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
-      <basicBlocks>49</basicBlocks>
+      <basicBlocks>28</basicBlocks>
       <mDfPipe/>
     </cfgRegions>
   </CFGRegionsRoot>

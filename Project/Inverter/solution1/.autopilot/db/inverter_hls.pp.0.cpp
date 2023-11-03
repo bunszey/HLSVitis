@@ -375,7 +375,7 @@ typedef __uintmax_t uintmax_t;
 
 
 
-__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char in_r[307200], volatile unsigned char out_r[307200]) {_ssdm_SpecArrayDimSize(in_r, 307200);_ssdm_SpecArrayDimSize(out_r, 307200);
+__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile int in_r[307200], volatile int out_r[307200]) {_ssdm_SpecArrayDimSize(in_r, 307200);_ssdm_SpecArrayDimSize(out_r, 307200);
 #pragma HLS TOP name=inverter
 # 6 "../inverter_hls.cpp"
 
@@ -387,8 +387,8 @@ __attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char 
 
 
  VITIS_LOOP_14_1: for (int i = 0; i < 307200; i++) {
-#pragma HLS UNROLL factor=4
- out_r[i] = 255 - in_r[i];
+
+        out_r[i] = 255 - in_r[i];
     }
 
 }
