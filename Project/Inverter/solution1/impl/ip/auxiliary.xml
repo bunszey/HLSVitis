@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="inverter" xd:componentRef="inverter" xd:initiationInterval="76803" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXI_CPU" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(in_r)" xd:originalName="in_r" xd:direction="in" xd:interfaceRef="in_r_PORTA" xd:busTypeRef="bram" xd:dataWidth="1"/>
+  <xd:arg xd:name="*(out_r)" xd:originalName="out_r" xd:direction="out" xd:interfaceRef="out_r_PORTA" xd:busTypeRef="bram" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="76802" xd:worst-case="76802" xd:average-case="76802"/>
+  <xd:resourceEstimates xd:LUT="165" xd:FF="76" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>
