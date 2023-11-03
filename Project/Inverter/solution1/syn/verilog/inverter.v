@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="inverter_inverter,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.093000,HLS_SYN_LAT=307202,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=80,HLS_SYN_LUT=135,HLS_VERSION=2020_2}" *)
+(* CORE_GENERATION_INFO="inverter_inverter,hls_ip_2020_2,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xczu3eg-sbva484-1-e,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=3.093000,HLS_SYN_LAT=153602,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=153,HLS_SYN_LUT=264,HLS_VERSION=2020_2}" *)
 
 module inverter (
         ap_clk,
@@ -19,6 +19,13 @@ module inverter (
         in_r_Dout_A,
         in_r_Clk_A,
         in_r_Rst_A,
+        in_r_Addr_B,
+        in_r_EN_B,
+        in_r_WEN_B,
+        in_r_Din_B,
+        in_r_Dout_B,
+        in_r_Clk_B,
+        in_r_Rst_B,
         out_r_Addr_A,
         out_r_EN_A,
         out_r_WEN_A,
@@ -26,6 +33,13 @@ module inverter (
         out_r_Dout_A,
         out_r_Clk_A,
         out_r_Rst_A,
+        out_r_Addr_B,
+        out_r_EN_B,
+        out_r_WEN_B,
+        out_r_Din_B,
+        out_r_Dout_B,
+        out_r_Clk_B,
+        out_r_Rst_B,
         s_axi_AXI_CPU_AWVALID,
         s_axi_AXI_CPU_AWREADY,
         s_axi_AXI_CPU_AWADDR,
@@ -46,9 +60,10 @@ module inverter (
         interrupt
 );
 
-parameter    ap_ST_fsm_state1 = 3'd1;
-parameter    ap_ST_fsm_pp0_stage0 = 3'd2;
-parameter    ap_ST_fsm_state4 = 3'd4;
+parameter    ap_ST_fsm_state1 = 4'd1;
+parameter    ap_ST_fsm_pp0_stage0 = 4'd2;
+parameter    ap_ST_fsm_pp0_stage1 = 4'd4;
+parameter    ap_ST_fsm_state5 = 4'd8;
 parameter    C_S_AXI_AXI_CPU_DATA_WIDTH = 32;
 parameter    C_S_AXI_AXI_CPU_ADDR_WIDTH = 4;
 parameter    C_S_AXI_DATA_WIDTH = 32;
@@ -65,6 +80,13 @@ output  [7:0] in_r_Din_A;
 input  [7:0] in_r_Dout_A;
 output   in_r_Clk_A;
 output   in_r_Rst_A;
+output  [31:0] in_r_Addr_B;
+output   in_r_EN_B;
+output  [0:0] in_r_WEN_B;
+output  [7:0] in_r_Din_B;
+input  [7:0] in_r_Dout_B;
+output   in_r_Clk_B;
+output   in_r_Rst_B;
 output  [31:0] out_r_Addr_A;
 output   out_r_EN_A;
 output  [0:0] out_r_WEN_A;
@@ -72,6 +94,13 @@ output  [7:0] out_r_Din_A;
 input  [7:0] out_r_Dout_A;
 output   out_r_Clk_A;
 output   out_r_Rst_A;
+output  [31:0] out_r_Addr_B;
+output   out_r_EN_B;
+output  [0:0] out_r_WEN_B;
+output  [7:0] out_r_Din_B;
+input  [7:0] out_r_Dout_B;
+output   out_r_Clk_B;
+output   out_r_Rst_B;
 input   s_axi_AXI_CPU_AWVALID;
 output   s_axi_AXI_CPU_AWREADY;
 input  [C_S_AXI_AXI_CPU_ADDR_WIDTH - 1:0] s_axi_AXI_CPU_AWADDR;
@@ -92,42 +121,63 @@ output  [1:0] s_axi_AXI_CPU_BRESP;
 output   interrupt;
 
 reg in_r_EN_A;
+reg in_r_EN_B;
 reg out_r_EN_A;
 reg[0:0] out_r_WEN_A;
+reg out_r_EN_B;
+reg[0:0] out_r_WEN_B;
 
  reg    ap_rst_n_inv;
 wire    ap_start;
 reg    ap_done;
 reg    ap_idle;
-(* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
 reg    ap_ready;
-reg   [18:0] i_reg_74;
-wire   [18:0] add_ln14_fu_85_p2;
+reg   [18:0] i_reg_136;
+wire   [0:0] icmp_ln14_fu_162_p2;
+reg   [0:0] icmp_ln14_reg_212;
 wire    ap_CS_fsm_pp0_stage0;
-reg    ap_enable_reg_pp0_iter0;
 wire    ap_block_state2_pp0_stage0_iter0;
-wire    ap_block_state3_pp0_stage0_iter1;
+wire    ap_block_state4_pp0_stage0_iter1;
 wire    ap_block_pp0_stage0_11001;
-wire   [0:0] icmp_ln14_fu_91_p2;
-reg   [0:0] icmp_ln14_reg_114;
-wire   [63:0] i_cast_fu_97_p1;
-reg   [63:0] i_cast_reg_118;
+wire   [63:0] i_cast1_fu_168_p1;
+reg   [63:0] i_cast1_reg_216;
+wire   [63:0] zext_ln16_fu_179_p1;
+reg   [63:0] zext_ln16_reg_226;
+wire   [18:0] add_ln14_fu_184_p2;
+reg   [18:0] add_ln14_reg_236;
+wire    ap_CS_fsm_pp0_stage1;
+reg    ap_enable_reg_pp0_iter0;
+wire    ap_block_state3_pp0_stage1_iter0;
+wire    ap_block_pp0_stage1_11001;
+wire   [63:0] zext_ln16_1_fu_196_p1;
+reg   [63:0] zext_ln16_1_reg_241;
+wire   [63:0] zext_ln16_2_fu_207_p1;
+reg   [63:0] zext_ln16_2_reg_251;
 wire    ap_block_pp0_stage0_subdone;
 reg    ap_condition_pp0_exit_iter0_state2;
 reg    ap_enable_reg_pp0_iter1;
+wire    ap_block_pp0_stage1_subdone;
+reg   [18:0] ap_phi_mux_i_phi_fu_140_p4;
 wire    ap_block_pp0_stage0;
-wire   [31:0] in_r_Addr_A_orig;
-wire   [31:0] out_r_Addr_A_orig;
-wire    ap_CS_fsm_state4;
-reg   [2:0] ap_NS_fsm;
+wire    ap_block_pp0_stage1;
+reg   [31:0] in_r_Addr_B_orig;
+reg   [31:0] in_r_Addr_A_orig;
+reg   [31:0] out_r_Addr_B_orig;
+reg   [31:0] out_r_Addr_A_orig;
+wire   [18:0] or_ln14_fu_173_p2;
+wire   [18:0] or_ln14_1_fu_190_p2;
+wire   [18:0] or_ln14_2_fu_201_p2;
+wire    ap_CS_fsm_state5;
+reg   [3:0] ap_NS_fsm;
 reg    ap_idle_pp0;
 wire    ap_enable_pp0;
 wire    ap_ce_reg;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 3'd1;
+#0 ap_CS_fsm = 4'd1;
 #0 ap_enable_reg_pp0_iter0 = 1'b0;
 #0 ap_enable_reg_pp0_iter1 = 1'b0;
 end
@@ -175,7 +225,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_enable_reg_pp0_iter0 <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b1 == ap_condition_pp0_exit_iter0_state2))) begin
+        if (((1'b1 == ap_condition_pp0_exit_iter0_state2) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
             ap_enable_reg_pp0_iter0 <= 1'b0;
         end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             ap_enable_reg_pp0_iter0 <= 1'b1;
@@ -187,9 +237,7 @@ always @ (posedge ap_clk) begin
     if (ap_rst_n_inv == 1'b1) begin
         ap_enable_reg_pp0_iter1 <= 1'b0;
     end else begin
-        if (((1'b0 == ap_block_pp0_stage0_subdone) & (1'b1 == ap_condition_pp0_exit_iter0_state2))) begin
-            ap_enable_reg_pp0_iter1 <= (1'b1 ^ ap_condition_pp0_exit_iter0_state2);
-        end else if ((1'b0 == ap_block_pp0_stage0_subdone)) begin
+        if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b0 == ap_block_pp0_stage1_subdone)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b0) & (1'b0 == ap_block_pp0_stage0_subdone)))) begin
             ap_enable_reg_pp0_iter1 <= ap_enable_reg_pp0_iter0;
         end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
             ap_enable_reg_pp0_iter1 <= 1'b0;
@@ -199,26 +247,41 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        i_reg_74 <= 19'd0;
-    end else if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln14_fu_91_p2 == 1'd0))) begin
-        i_reg_74 <= add_ln14_fu_85_p2;
+        i_reg_136 <= 19'd0;
+    end else if (((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+        i_reg_136 <= add_ln14_reg_236;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (icmp_ln14_fu_91_p2 == 1'd0))) begin
-        i_cast_reg_118[18 : 0] <= i_cast_fu_97_p1[18 : 0];
+    if (((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001))) begin
+        add_ln14_reg_236 <= add_ln14_fu_184_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        icmp_ln14_reg_114 <= icmp_ln14_fu_91_p2;
+    if (((icmp_ln14_fu_162_p2 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+        i_cast1_reg_216[18 : 0] <= i_cast1_fu_168_p1[18 : 0];
+        zext_ln16_reg_226[18 : 1] <= zext_ln16_fu_179_p1[18 : 1];
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))) begin
+        icmp_ln14_reg_212 <= icmp_ln14_fu_162_p2;
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1) & (1'b0 == ap_block_pp0_stage1_11001))) begin
+        zext_ln16_1_reg_241[0] <= zext_ln16_1_fu_196_p1[0];
+zext_ln16_1_reg_241[18 : 2] <= zext_ln16_1_fu_196_p1[18 : 2];
+        zext_ln16_2_reg_251[18 : 2] <= zext_ln16_2_fu_207_p1[18 : 2];
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln14_fu_91_p2 == 1'd1)) begin
+    if ((icmp_ln14_fu_162_p2 == 1'd0)) begin
         ap_condition_pp0_exit_iter0_state2 = 1'b1;
     end else begin
         ap_condition_pp0_exit_iter0_state2 = 1'b0;
@@ -226,7 +289,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -242,7 +305,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((ap_enable_reg_pp0_iter0 == 1'b0) & (ap_enable_reg_pp0_iter1 == 1'b0))) begin
+    if (((ap_enable_reg_pp0_iter1 == 1'b0) & (ap_enable_reg_pp0_iter0 == 1'b0))) begin
         ap_idle_pp0 = 1'b1;
     end else begin
         ap_idle_pp0 = 1'b0;
@@ -250,7 +313,15 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
+    if (((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
+        ap_phi_mux_i_phi_fu_140_p4 = add_ln14_reg_236;
+    end else begin
+        ap_phi_mux_i_phi_fu_140_p4 = i_reg_136;
+    end
+end
+
+always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state5)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -258,7 +329,35 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
+        if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b0 == ap_block_pp0_stage1))) begin
+            in_r_Addr_A_orig = zext_ln16_2_fu_207_p1;
+        end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
+            in_r_Addr_A_orig = zext_ln16_fu_179_p1;
+        end else begin
+            in_r_Addr_A_orig = 'bx;
+        end
+    end else begin
+        in_r_Addr_A_orig = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((ap_enable_reg_pp0_iter0 == 1'b1)) begin
+        if (((1'b1 == ap_CS_fsm_pp0_stage1) & (1'b0 == ap_block_pp0_stage1))) begin
+            in_r_Addr_B_orig = zext_ln16_1_fu_196_p1;
+        end else if (((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0))) begin
+            in_r_Addr_B_orig = i_cast1_fu_168_p1;
+        end else begin
+            in_r_Addr_B_orig = 'bx;
+        end
+    end else begin
+        in_r_Addr_B_orig = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         in_r_EN_A = 1'b1;
     end else begin
         in_r_EN_A = 1'b0;
@@ -266,7 +365,35 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1))) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+        in_r_EN_B = 1'b1;
+    end else begin
+        in_r_EN_B = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
+        out_r_Addr_A_orig = zext_ln16_2_reg_251;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1))) begin
+        out_r_Addr_A_orig = zext_ln16_reg_226;
+    end else begin
+        out_r_Addr_A_orig = 'bx;
+    end
+end
+
+always @ (*) begin
+    if (((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0))) begin
+        out_r_Addr_B_orig = zext_ln16_1_reg_241;
+    end else if (((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1))) begin
+        out_r_Addr_B_orig = i_cast1_reg_216;
+    end else begin
+        out_r_Addr_B_orig = 'bx;
+    end
+end
+
+always @ (*) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         out_r_EN_A = 1'b1;
     end else begin
         out_r_EN_A = 1'b0;
@@ -274,10 +401,26 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (icmp_ln14_reg_114 == 1'd0))) begin
+    if ((((1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+        out_r_EN_B = 1'b1;
+    end else begin
+        out_r_EN_B = 1'b0;
+    end
+end
+
+always @ (*) begin
+    if ((((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
         out_r_WEN_A = 1'd1;
     end else begin
         out_r_WEN_A = 1'd0;
+    end
+end
+
+always @ (*) begin
+    if ((((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage1) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage1_11001)) | ((icmp_ln14_reg_212 == 1'd1) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b0 == ap_block_pp0_stage0_11001)))) begin
+        out_r_WEN_B = 1'd1;
+    end else begin
+        out_r_WEN_B = 1'd0;
     end
 end
 
@@ -291,15 +434,22 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_pp0_stage0 : begin
-            if (~((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln14_fu_91_p2 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if (((1'b0 == ap_block_pp0_stage0_subdone) & (ap_enable_reg_pp0_iter0 == 1'b1) & (icmp_ln14_fu_91_p2 == 1'd1))) begin
-                ap_NS_fsm = ap_ST_fsm_state4;
+            if ((~((icmp_ln14_fu_162_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone)) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
+            end else if (((icmp_ln14_fu_162_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b0 == ap_block_pp0_stage0_subdone))) begin
+                ap_NS_fsm = ap_ST_fsm_state5;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
             end
         end
-        ap_ST_fsm_state4 : begin
+        ap_ST_fsm_pp0_stage1 : begin
+            if ((1'b0 == ap_block_pp0_stage1_subdone)) begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage0;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_pp0_stage1;
+            end
+        end
+        ap_ST_fsm_state5 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -308,13 +458,15 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln14_fu_85_p2 = (i_reg_74 + 19'd1);
+assign add_ln14_fu_184_p2 = (i_reg_136 + 19'd4);
 
 assign ap_CS_fsm_pp0_stage0 = ap_CS_fsm[32'd1];
 
+assign ap_CS_fsm_pp0_stage1 = ap_CS_fsm[32'd2];
+
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
-assign ap_CS_fsm_state4 = ap_CS_fsm[32'd2];
+assign ap_CS_fsm_state5 = ap_CS_fsm[32'd3];
 
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
@@ -322,9 +474,17 @@ assign ap_block_pp0_stage0_11001 = ~(1'b1 == 1'b1);
 
 assign ap_block_pp0_stage0_subdone = ~(1'b1 == 1'b1);
 
+assign ap_block_pp0_stage1 = ~(1'b1 == 1'b1);
+
+assign ap_block_pp0_stage1_11001 = ~(1'b1 == 1'b1);
+
+assign ap_block_pp0_stage1_subdone = ~(1'b1 == 1'b1);
+
 assign ap_block_state2_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
-assign ap_block_state3_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
+assign ap_block_state3_pp0_stage1_iter0 = ~(1'b1 == 1'b1);
+
+assign ap_block_state4_pp0_stage0_iter1 = ~(1'b1 == 1'b1);
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
 
@@ -332,34 +492,66 @@ always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;
 end
 
-assign i_cast_fu_97_p1 = i_reg_74;
+assign i_cast1_fu_168_p1 = ap_phi_mux_i_phi_fu_140_p4;
 
-assign icmp_ln14_fu_91_p2 = ((i_reg_74 == 19'd307200) ? 1'b1 : 1'b0);
+assign icmp_ln14_fu_162_p2 = ((ap_phi_mux_i_phi_fu_140_p4 < 19'd307200) ? 1'b1 : 1'b0);
 
 assign in_r_Addr_A = in_r_Addr_A_orig << 32'd0;
 
-assign in_r_Addr_A_orig = i_cast_fu_97_p1;
+assign in_r_Addr_B = in_r_Addr_B_orig << 32'd0;
 
 assign in_r_Clk_A = ap_clk;
 
+assign in_r_Clk_B = ap_clk;
+
 assign in_r_Din_A = 8'd0;
+
+assign in_r_Din_B = 8'd0;
 
 assign in_r_Rst_A = ap_rst_n_inv;
 
+assign in_r_Rst_B = ap_rst_n_inv;
+
 assign in_r_WEN_A = 1'd0;
+
+assign in_r_WEN_B = 1'd0;
+
+assign or_ln14_1_fu_190_p2 = (i_reg_136 | 19'd2);
+
+assign or_ln14_2_fu_201_p2 = (i_reg_136 | 19'd3);
+
+assign or_ln14_fu_173_p2 = (ap_phi_mux_i_phi_fu_140_p4 | 19'd1);
 
 assign out_r_Addr_A = out_r_Addr_A_orig << 32'd0;
 
-assign out_r_Addr_A_orig = i_cast_reg_118;
+assign out_r_Addr_B = out_r_Addr_B_orig << 32'd0;
 
 assign out_r_Clk_A = ap_clk;
 
+assign out_r_Clk_B = ap_clk;
+
 assign out_r_Din_A = (in_r_Dout_A ^ 8'd255);
+
+assign out_r_Din_B = (in_r_Dout_B ^ 8'd255);
 
 assign out_r_Rst_A = ap_rst_n_inv;
 
+assign out_r_Rst_B = ap_rst_n_inv;
+
+assign zext_ln16_1_fu_196_p1 = or_ln14_1_fu_190_p2;
+
+assign zext_ln16_2_fu_207_p1 = or_ln14_2_fu_201_p2;
+
+assign zext_ln16_fu_179_p1 = or_ln14_fu_173_p2;
+
 always @ (posedge ap_clk) begin
-    i_cast_reg_118[63:19] <= 45'b000000000000000000000000000000000000000000000;
+    i_cast1_reg_216[63:19] <= 45'b000000000000000000000000000000000000000000000;
+    zext_ln16_reg_226[0] <= 1'b1;
+    zext_ln16_reg_226[63:19] <= 45'b000000000000000000000000000000000000000000000;
+    zext_ln16_1_reg_241[1] <= 1'b1;
+    zext_ln16_1_reg_241[63:19] <= 45'b000000000000000000000000000000000000000000000;
+    zext_ln16_2_reg_251[1:0] <= 2'b11;
+    zext_ln16_2_reg_251[63:19] <= 45'b000000000000000000000000000000000000000000000;
 end
 
 endmodule //inverter

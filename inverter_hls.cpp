@@ -12,7 +12,7 @@ void inverter(volatile unsigned char in_r[DATA_SIZE], volatile unsigned char out
 
     // Add the vectors
     for (int i = 0; i < DATA_SIZE; i++) {
-		//#pragma HLS UNROLL factor=500
+		#pragma HLS UNROLL factor=4
         out_r[i] = 255 - in_r[i];
     }
 

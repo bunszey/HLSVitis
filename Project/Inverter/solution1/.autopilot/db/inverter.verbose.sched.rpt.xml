@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'inverter'" level="0">
-<item name = "Date">Fri Nov  3 01:08:44 2023
+<item name = "Date">Fri Nov  3 01:51:54 2023
 </item>
 <item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
 <item name = "Project">Inverter</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">307202, 307202, 3.072 ms, 3.072 ms, 307203, 307203, none</column>
+<column name="">153602, 153602, 1.536 ms, 1.536 ms, 153603, 153603, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- VITIS_LOOP_14_1">307200, 307200, 2, 1, 1, 307200, yes</column>
+<column name="- VITIS_LOOP_14_1">153600, 153600, 3, 2, 1, 76800, yes</column>
 </table>
 </item>
 </section>

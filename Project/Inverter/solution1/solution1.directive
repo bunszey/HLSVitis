@@ -5,6 +5,11 @@
                 <option name="name" value="inverter"/>
             </pragma>
         </directive>
+        <directive functionName="inverter" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="inverter"/>
+            </pragma>
+        </directive>
     </sourceFile>
 </AutoPilot:ProjectResources>
 

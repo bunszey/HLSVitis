@@ -387,8 +387,8 @@ __attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char 
 
 
  VITIS_LOOP_14_1: for (int i = 0; i < 307200; i++) {
-
-        out_r[i] = 255 - in_r[i];
+#pragma HLS UNROLL factor=4
+ out_r[i] = 255 - in_r[i];
     }
 
 }

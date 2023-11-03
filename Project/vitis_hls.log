@@ -1,9 +1,9 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'jonas' on host 'jonas-ThinkPad-L590' (Linux_x86_64 version 5.15.0-88-generic) on Fri Nov 03 01:10:35 CET 2023
+INFO: [HLS 200-10] For user 'jonas' on host 'jonas-ThinkPad-L590' (Linux_x86_64 version 5.15.0-88-generic) on Fri Nov 03 01:51:19 CET 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project'
-Sourcing Tcl script '/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/Inverter/solution1/export.tcl'
+Sourcing Tcl script '/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/Inverter/solution1/csynth.tcl'
 INFO: [HLS 200-1510] Running: open_project Inverter 
 INFO: [HLS 200-10] Opening project '/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/Inverter'.
 INFO: [HLS 200-1510] Running: set_top inverter 
@@ -24,19 +24,58 @@ INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-e
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
 INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip -rtl vhdl 
 INFO: [HLS 200-1510] Running: set_directive_top -name inverter inverter 
-INFO: [HLS 200-1510] Running: export_design -rtl vhdl -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip 
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source run_ippack.tcl -notrace
-ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2411.797 ; gain = 0.023 ; free physical = 638 ; free virtual = 17926
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/jonas/tools/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 01:11:17 2023...
-INFO: [HLS 200-802] Generated output file inverter.zip
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 37.11 seconds. CPU system time: 3.35 seconds. Elapsed time: 39.17 seconds; current allocated memory: 200.060 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 191.694 MB.
+INFO: [HLS 200-10] Analyzing design file '../inverter_hls.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.61 seconds. CPU system time: 0.44 seconds. Elapsed time: 1.27 seconds; current allocated memory: 192.906 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-188] Unrolling loop 'VITIS_LOOP_14_1' (../inverter_hls.cpp:14:19) in function 'inverter' partially with a factor of 4 (../inverter_hls.cpp:14:19)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 16.81 seconds. CPU system time: 1.34 seconds. Elapsed time: 18.57 seconds; current allocated memory: 194.557 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 194.558 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 195.676 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 194.982 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_1' (../inverter_hls.cpp:14) in function 'inverter' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.34 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.41 seconds; current allocated memory: 215.288 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'out_r' (../inverter_hls.cpp:16:11)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 207.487 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inverter' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inverter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_1'.
+WARNING: [HLS 200-885] Unable to schedule 'load' operation ('in_r_load_2', ../inverter_hls.cpp:16) on array 'in_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'in_r'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 3, loop 'VITIS_LOOP_14_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 207.825 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 208.056 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inverter' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverter/in_r' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inverter/out_r' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inverter' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXI_CPU.
+WARNING: [RTGEN 206-101] Setting dangling out port 'inverter/in_r_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'inverter/in_r_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'inverter/in_r_WEN_B' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'inverter/in_r_Din_B' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inverter'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 208.627 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 5.65 seconds. CPU system time: 0.12 seconds. Elapsed time: 5.85 seconds; current allocated memory: 216.696 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for inverter.
+INFO: [VLOG 209-307] Generating Verilog RTL for inverter.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 323.31 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 25.16 seconds. CPU system time: 2.04 seconds. Elapsed time: 28.1 seconds; current allocated memory: 217.061 MB.
+INFO: [HLS 200-112] Total CPU user time: 44.32 seconds. Total CPU system time: 5.01 seconds. Total elapsed time: 42.33 seconds; peak allocated memory: 216.696 MB.
