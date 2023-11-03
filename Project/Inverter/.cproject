@@ -51,15 +51,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.759505015" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -85,15 +87,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1162775691" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -115,7 +119,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.557118192" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -129,7 +133,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.1984040811" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -156,6 +160,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1869717333.181393283" name="inverter_hls_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/inverter_hls_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.141118264.1851453503">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.141118264.1851453503" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.141118264">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1346511162" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.655488767" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1550706422" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.478642513" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -219,15 +253,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.1474775512" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -243,15 +279,17 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.compiler.option.include.paths.1593020116" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
                                     								
                                 </option>
                                 								
@@ -263,7 +301,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.c.link.option.paths.1404842876" name="Library search path (-L)" superClass="gnu.c.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -277,7 +315,7 @@
                                 								
                                 <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.link.option.paths.955942860" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
                                     									
-                                    <listOptionValue builtIn="false" value="/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
+                                    <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/lib"/>
                                     								
                                 </option>
                                 								
@@ -304,6 +342,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1091920592.1317169490" name="inverter_hls_tb.cpp" rcbsApplicability="disable" resourcePath="testbench/inverter_hls_tb.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.472711675.655491545">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.472711675.655491545" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.472711675">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1943439763" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="gnu.cpp.compiler.option.include.paths.268471545" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/systemc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.1048237899" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.2068670313" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

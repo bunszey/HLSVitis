@@ -4,8 +4,8 @@
 # 375 "<built-in>" 3
 # 1 "<command line>" 1
 # 1 "<built-in>" 2
-# 1 "/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
-# 158 "/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
+# 1 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h" 1
+# 158 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/etc/autopilot_ssdm_op.h"
 extern "C" {
 
 
@@ -151,8 +151,8 @@ extern "C" {
 }
 # 2 "<built-in>" 2
 # 1 "../inverter_hls.cpp" 2
-# 1 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
-# 63 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 3
+# 1 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 1 3
+# 63 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 3
 # 1 "/usr/include/stdint.h" 1 3 4
 # 26 "/usr/include/stdint.h" 3 4
 # 1 "/usr/include/bits/libc-header-start.h" 1 3 4
@@ -369,24 +369,26 @@ typedef unsigned long int uintptr_t;
 # 101 "/usr/include/stdint.h" 3 4
 typedef __intmax_t intmax_t;
 typedef __uintmax_t uintmax_t;
-# 64 "/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 2 3
+# 64 "/home/jonas/tools/Xilinx/Vitis_HLS/2020.2/lnx64/tools/clang-3.9-csynth/lib/clang/7.0.0/include/stdint.h" 2 3
 # 2 "../inverter_hls.cpp" 2
 
 
 
 
-__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char in[307200], volatile unsigned char out[307200]) {_ssdm_SpecArrayDimSize(in, 307200);_ssdm_SpecArrayDimSize(out, 307200);
+__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char in_r[307200], volatile unsigned char out_r[307200]) {_ssdm_SpecArrayDimSize(in_r, 307200);_ssdm_SpecArrayDimSize(out_r, 307200);
 #pragma HLS TOP name=inverter
 # 6 "../inverter_hls.cpp"
 
 #pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
-#pragma HLS INTERFACE s_axilite port=in bundle=AXI_CPU
-#pragma HLS INTERFACE s_axilite port=out bundle=AXI_CPU
+#pragma HLS INTERFACE bram port=in_r
+#pragma HLS INTERFACE bram port=out_r
 
 
- VITIS_LOOP_12_1: for (int i = 0; i < 307200; i++) {
-#pragma HLS UNROLL factor=500
- out[i] = 255 - in[i];
+
+
+ VITIS_LOOP_14_1: for (int i = 0; i < 307200; i++) {
+
+        out_r[i] = 255 - in_r[i];
     }
 
 }

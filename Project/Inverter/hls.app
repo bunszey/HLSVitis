@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="inverter" name="Inverter">
+<project xmlns="com.autoesl.autopilot.project" name="Inverter" top="inverter">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

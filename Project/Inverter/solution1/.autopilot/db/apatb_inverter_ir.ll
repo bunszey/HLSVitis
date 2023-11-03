@@ -1,20 +1,20 @@
-; ModuleID = '/home/lars/Documents/MPsocGroup/HLSVitis/Project/Inverter/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
+; ModuleID = '/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/Inverter/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
 source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
 
 ; Function Attrs: noinline
-define void @apatb_inverter_ir(i8* %in, i8* %out) local_unnamed_addr #0 {
+define void @apatb_inverter_ir(i8* %in_r, i8* %out_r) local_unnamed_addr #0 {
 entry:
   %malloccall = tail call i8* @malloc(i64 307200)
-  %in_copy = bitcast i8* %malloccall to [307200 x i8]*
+  %in_r_copy = bitcast i8* %malloccall to [307200 x i8]*
   %malloccall1 = tail call i8* @malloc(i64 307200)
-  %out_copy = bitcast i8* %malloccall1 to [307200 x i8]*
-  %0 = bitcast i8* %in to [307200 x i8]*
-  %1 = bitcast i8* %out to [307200 x i8]*
-  call fastcc void @copy_in([307200 x i8]* %0, [307200 x i8]* %in_copy, [307200 x i8]* %1, [307200 x i8]* %out_copy)
+  %out_r_copy = bitcast i8* %malloccall1 to [307200 x i8]*
+  %0 = bitcast i8* %in_r to [307200 x i8]*
+  %1 = bitcast i8* %out_r to [307200 x i8]*
+  call fastcc void @copy_in([307200 x i8]* %0, [307200 x i8]* %in_r_copy, [307200 x i8]* %1, [307200 x i8]* %out_r_copy)
   call void @apatb_inverter_hw(i8* %malloccall, i8* %malloccall1)
-  call fastcc void @copy_out([307200 x i8]* %0, [307200 x i8]* %in_copy, [307200 x i8]* %1, [307200 x i8]* %out_copy)
+  call fastcc void @copy_out([307200 x i8]* %0, [307200 x i8]* %in_r_copy, [307200 x i8]* %1, [307200 x i8]* %out_r_copy)
   tail call void @free(i8* %malloccall)
   tail call void @free(i8* %malloccall1)
   ret void

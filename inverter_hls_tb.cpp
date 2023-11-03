@@ -4,7 +4,7 @@
 
 #define ARRAY_LENGTH 307200
 
-void inverter(volatile unsigned char in[ARRAY_LENGTH], volatile unsigned char out[ARRAY_LENGTH]);
+void inverter(volatile unsigned char in_r[ARRAY_LENGTH], volatile unsigned char out_r[ARRAY_LENGTH]);
 
 int main() {
     int a = 1 ;

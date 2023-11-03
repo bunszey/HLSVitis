@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="inverter_hls.cpp" path="/home/lars/Documents/MPsocGroup/HLSVitis/inverter_hls.cpp"/>
+    <originFiles name="inverter_hls.cpp" path="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/inverter_hls.cpp"/>
   </source>
   <testbench>
-    <originFiles name="inverter_hls_tb.cpp" path="/home/lars/Documents/MPsocGroup/HLSVitis/inverter_hls_tb.cpp"/>
+    <originFiles name="inverter_hls_tb.cpp" path="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/inverter_hls_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

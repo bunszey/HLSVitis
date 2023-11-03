@@ -87,24 +87,6 @@ u32 XInverter_IsReady(XInverter *InstancePtr);
 void XInverter_EnableAutoRestart(XInverter *InstancePtr);
 void XInverter_DisableAutoRestart(XInverter *InstancePtr);
 
-u32 XInverter_Get_in_r_BaseAddress(XInverter *InstancePtr);
-u32 XInverter_Get_in_r_HighAddress(XInverter *InstancePtr);
-u32 XInverter_Get_in_r_TotalBytes(XInverter *InstancePtr);
-u32 XInverter_Get_in_r_BitWidth(XInverter *InstancePtr);
-u32 XInverter_Get_in_r_Depth(XInverter *InstancePtr);
-u32 XInverter_Write_in_r_Words(XInverter *InstancePtr, int offset, word_type *data, int length);
-u32 XInverter_Read_in_r_Words(XInverter *InstancePtr, int offset, word_type *data, int length);
-u32 XInverter_Write_in_r_Bytes(XInverter *InstancePtr, int offset, char *data, int length);
-u32 XInverter_Read_in_r_Bytes(XInverter *InstancePtr, int offset, char *data, int length);
-u32 XInverter_Get_out_r_BaseAddress(XInverter *InstancePtr);
-u32 XInverter_Get_out_r_HighAddress(XInverter *InstancePtr);
-u32 XInverter_Get_out_r_TotalBytes(XInverter *InstancePtr);
-u32 XInverter_Get_out_r_BitWidth(XInverter *InstancePtr);
-u32 XInverter_Get_out_r_Depth(XInverter *InstancePtr);
-u32 XInverter_Write_out_r_Words(XInverter *InstancePtr, int offset, word_type *data, int length);
-u32 XInverter_Read_out_r_Words(XInverter *InstancePtr, int offset, word_type *data, int length);
-u32 XInverter_Write_out_r_Bytes(XInverter *InstancePtr, int offset, char *data, int length);
-u32 XInverter_Read_out_r_Bytes(XInverter *InstancePtr, int offset, char *data, int length);
 
 void XInverter_InterruptGlobalEnable(XInverter *InstancePtr);
 void XInverter_InterruptGlobalDisable(XInverter *InstancePtr);
