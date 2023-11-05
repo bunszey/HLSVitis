@@ -10,9 +10,9 @@ add_files -tb ../inverter_hls_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-e}
 create_clock -period 10 -name default
-config_export -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip -rtl vhdl
+config_export -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip -rtl vhdl
 source "./Inverter/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -rtl vhdl -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip
+export_design -rtl vhdl -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip

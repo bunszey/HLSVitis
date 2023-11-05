@@ -1,6 +1,6 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2020.2/bin/unwrapped/lnx64.o/vitis_hls'
-INFO: [HLS 200-10] For user 'lars' on host 'lars-GS65' (Linux_x86_64 version 5.15.0-88-generic) on Fri Nov 03 09:52:35 CET 2023
+INFO: [HLS 200-10] For user 'lars' on host 'lars-GS65' (Linux_x86_64 version 5.15.0-88-generic) on Sun Nov 05 14:35:56 CET 2023
 INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
 INFO: [HLS 200-10] In directory '/home/lars/Documents/MPsocGroup/HLSVitis/Project'
 Sourcing Tcl script '/home/lars/Documents/MPsocGroup/HLSVitis/Project/Inverter/solution1/export.tcl'
@@ -18,13 +18,13 @@ INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2020.2;t=hls+guidance;d=200-1505.html
 INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
-INFO: [HLS 200-1464] Running solution command: config_export -output=/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip
 INFO: [HLS 200-1464] Running solution command: config_export -rtl=vhdl
 INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-e 
 INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
-INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip -rtl vhdl 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip -rtl vhdl 
 INFO: [HLS 200-1510] Running: set_directive_top -name inverter inverter 
-INFO: [HLS 200-1510] Running: export_design -rtl vhdl -format ip_catalog -output /home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip 
+INFO: [HLS 200-1510] Running: export_design -rtl vhdl -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip 
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
 
 ****** Vivado v2020.2 (64-bit)
@@ -36,16 +36,6 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2020.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 09:53:03 2023...
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 26.47 seconds. CPU system time: 2.37 seconds. Elapsed time: 27.84 seconds; current allocated memory: 101.604 MB.
-can't create directory "/home/jonas": permission denied
-    while executing
-"source /home/lars/Documents/MPsocGroup/HLSVitis/Project/Inverter/solution1/export.tcl"
-    invoked from within
-"hls::main /home/lars/Documents/MPsocGroup/HLSVitis/Project/Inverter/solution1/export.tcl"
-    ("uplevel" body line 1)
-    invoked from within
-"uplevel 1 hls::main {*}$newargs"
-    (procedure "hls_proc" line 16)
-    invoked from within
-"hls_proc [info nameofexecutable] $argv"
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  5 14:36:18 2023...
+INFO: [HLS 200-802] Generated output file inverter.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 21.94 seconds. CPU system time: 1.91 seconds. Elapsed time: 22.35 seconds; current allocated memory: 101.654 MB.

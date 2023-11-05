@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Messages>
 	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1776" tag="" content="Exporting RTL as a Vivado IP." resolution=""/>
-	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 26.47 seconds. CPU system time: 2.37 seconds. Elapsed time: 27.84 seconds; current allocated memory: 101.604 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-802]" key="HLS 200-802" tag="" content="Generated output file inverter.zip" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command export_design CPU user time: 21.94 seconds. CPU system time: 1.91 seconds. Elapsed time: 22.35 seconds; current allocated memory: 101.654 MB." resolution=""/>
 </Messages>

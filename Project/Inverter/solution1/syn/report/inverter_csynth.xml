@@ -22,31 +22,31 @@
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>76802</Best-caseLatency>
-<Average-caseLatency>76802</Average-caseLatency>
-<Worst-caseLatency>76802</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.768 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.768 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.768 ms</Worst-caseRealTimeLatency>
-<Interval-min>76803</Interval-min>
-<Interval-max>76803</Interval-max>
+<Best-caseLatency>25442</Best-caseLatency>
+<Average-caseLatency>25442</Average-caseLatency>
+<Worst-caseLatency>25442</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.254 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.254 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.254 ms</Worst-caseRealTimeLatency>
+<Interval-min>25443</Interval-min>
+<Interval-max>25443</Interval-max>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
-<VITIS_LOOP_18_1>
-<TripCount>76800</TripCount>
-<Latency>76800</Latency>
-<AbsoluteTimeLatency>768000</AbsoluteTimeLatency>
+<VITIS_LOOP_16_1>
+<TripCount>25440</TripCount>
+<Latency>25440</Latency>
+<AbsoluteTimeLatency>254400</AbsoluteTimeLatency>
 <PipelineII>1</PipelineII>
 <PipelineDepth>2</PipelineDepth>
-</VITIS_LOOP_18_1>
+</VITIS_LOOP_16_1>
 </SummaryOfLoopLatency>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<FF>76</FF>
-<LUT>165</LUT>
+<FF>72</FF>
+<LUT>162</LUT>
 <DSP>0</DSP>
 <URAM>0</URAM>
 </Resources>

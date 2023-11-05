@@ -46,7 +46,7 @@
     "FlowTarget": "vivado",
     "ConfigTcl": [
       "config_export -format=ip_catalog",
-      "config_export -output=\/home\/jonas\/SDU\/1_semester\/embedded_systems\/Projekts\/HLSVitis\/Project\/inverter.zip",
+      "config_export -output=\/home\/lars\/Documents\/MPsocGroup\/HLSVitis\/Project\/inverter.zip",
       "config_export -rtl=vhdl"
     ],
     "DirectiveTcl": [
@@ -63,7 +63,7 @@
     "Uncertainty": "2.7",
     "IsCombinational": "0",
     "II": "x",
-    "Latency": "76802"
+    "Latency": "25442"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -551,10 +551,10 @@
       }},
     "Metrics": {"inverter": {
         "Latency": {
-          "LatencyBest": "76802",
-          "LatencyAvg": "76802",
-          "LatencyWorst": "76802",
-          "PipelineII": "76803",
+          "LatencyBest": "25442",
+          "LatencyAvg": "25442",
+          "LatencyWorst": "25442",
+          "PipelineII": "25443",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -564,9 +564,9 @@
           "Estimate": "3.093"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_18_1",
-            "TripCount": "76800",
-            "Latency": "76800",
+            "Name": "VITIS_LOOP_16_1",
+            "TripCount": "25440",
+            "Latency": "25440",
             "PipelineII": "1",
             "PipelineDepth": "2"
           }],
@@ -574,10 +574,10 @@
           "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
           "UTIL_BRAM": "0",
-          "FF": "76",
+          "FF": "72",
           "AVAIL_FF": "141120",
           "UTIL_FF": "~0",
-          "LUT": "165",
+          "LUT": "162",
           "AVAIL_LUT": "70560",
           "UTIL_LUT": "~0",
           "DSP": "0",
@@ -592,7 +592,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2023-11-03 09:49:13 CET",
+    "Time": "2023-11-05 14:18:17 CET",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }

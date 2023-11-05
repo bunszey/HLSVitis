@@ -12,8 +12,8 @@ set isEnableWaveformDebug 1
 set C_modelName {inverter}
 set C_modelType { void 0 }
 set C_modelArgList {
-	{ in_r int 32 regular {bram 76800 { 1 3 } 1 1 }  }
-	{ out_r int 32 regular {bram 76800 { 0 3 } 0 1 }  }
+	{ in_r int 32 regular {bram 25440 { 1 3 } 1 1 }  }
+	{ out_r int 32 regular {bram 25440 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "in_r", "interface" : "bram", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "in_r","cData": "int","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
@@ -99,7 +99,7 @@ set RtlHierarchyInfo {[
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1", "real_start" : "0",
 		"Pipeline" : "None", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
 		"II" : "0",
-		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "76802", "EstimateLatencyMax" : "76802",
+		"VariableLatency" : "1", "ExactLatency" : "-1", "EstimateLatencyMin" : "25442", "EstimateLatencyMax" : "25442",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -120,8 +120,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "76802", "Max" : "76802"}
-	, {"Name" : "Interval", "Min" : "76803", "Max" : "76803"}
+	{"Name" : "Latency", "Min" : "25442", "Max" : "25442"}
+	, {"Name" : "Interval", "Min" : "25443", "Max" : "25443"}
 ]}
 
 set PipelineEnableSignalInfo {[

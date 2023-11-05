@@ -31,13 +31,13 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>3007</coreId>
+						<coreId>1953702003</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>76800</array_size>
+				<array_size>25440</array_size>
 				<bit_vecs class_id="7" tracking_level="0" version="0">
 					<count>0</count>
 					<item_version>0</item_version>
@@ -64,13 +64,13 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061431928</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
 				<direction>1</direction>
 				<if_type>1</if_type>
-				<array_size>76800</array_size>
+				<array_size>25440</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -85,10 +85,10 @@
 					<Obj>
 						<type>0</type>
 						<id>9</id>
-						<name>br_ln18</name>
+						<name>br_ln16</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -104,7 +104,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -141,7 +141,7 @@
 						<name>i</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -157,7 +157,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -168,9 +168,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>4294967292</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>4</count>
@@ -194,10 +194,10 @@
 					<Obj>
 						<type>0</type>
 						<id>12</id>
-						<name>add_ln18</name>
+						<name>add_ln16</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -213,7 +213,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -224,9 +224,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>16</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -239,7 +239,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>1.02</m_delay>
+				<m_delay>1.00</m_delay>
 				<m_topoIndex>3</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -248,10 +248,10 @@
 					<Obj>
 						<type>0</type>
 						<id>13</id>
-						<name>icmp_ln18</name>
+						<name>icmp_ln16</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -267,7 +267,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -278,7 +278,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>132</coreId>
+						<coreId>32</coreId>
 					</Obj>
 					<bitwidth>1</bitwidth>
 				</Value>
@@ -293,7 +293,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.88</m_delay>
+				<m_delay>0.86</m_delay>
 				<m_topoIndex>4</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -302,10 +302,10 @@
 					<Obj>
 						<type>0</type>
 						<id>15</id>
-						<name>br_ln18</name>
+						<name>br_ln16</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -321,7 +321,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -332,7 +332,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>14</coreId>
+						<coreId>0</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -357,10 +357,10 @@
 					<Obj>
 						<type>0</type>
 						<id>17</id>
-						<name>zext_ln18</name>
+						<name>zext_ln16</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>18</lineNumber>
+						<lineNumber>16</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -376,7 +376,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>18</second>
+										<second>16</second>
 									</item>
 								</second>
 							</item>
@@ -387,7 +387,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>370034432</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -413,7 +413,7 @@
 						<name>in_r_addr</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>18</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -429,7 +429,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>20</second>
+										<second>18</second>
 									</item>
 								</second>
 							</item>
@@ -440,9 +440,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>808464928</coreId>
+						<coreId>49</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -468,7 +468,7 @@
 						<name>in_r_load</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>20</lineNumber>
+						<lineNumber>18</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -484,7 +484,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>20</second>
+										<second>18</second>
 									</item>
 								</second>
 							</item>
@@ -495,7 +495,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>370136816</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -518,10 +518,10 @@
 					<Obj>
 						<type>0</type>
 						<id>22</id>
-						<name>trunc_ln26</name>
+						<name>trunc_ln24</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -537,7 +537,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -548,7 +548,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1342177408</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -571,10 +571,10 @@
 					<Obj>
 						<type>0</type>
 						<id>23</id>
-						<name>xor_ln26</name>
+						<name>xor_ln24</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -590,7 +590,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -601,7 +601,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>544437365</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -625,10 +625,10 @@
 					<Obj>
 						<type>0</type>
 						<id>24</id>
-						<name>trunc_ln26_1</name>
+						<name>trunc_ln24_1</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -644,7 +644,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -655,7 +655,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1342177408</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -681,10 +681,10 @@
 					<Obj>
 						<type>0</type>
 						<id>25</id>
-						<name>xor_ln26_1</name>
+						<name>xor_ln24_1</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -700,7 +700,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -735,10 +735,10 @@
 					<Obj>
 						<type>0</type>
 						<id>26</id>
-						<name>trunc_ln26_2</name>
+						<name>trunc_ln24_2</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -754,7 +754,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -765,7 +765,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>538970658</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -791,10 +791,10 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>xor_ln26_2</name>
+						<name>xor_ln24_2</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -810,7 +810,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -821,7 +821,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061498264</coreId>
+						<coreId>1403988440</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -845,10 +845,10 @@
 					<Obj>
 						<type>0</type>
 						<id>28</id>
-						<name>trunc_ln26_3</name>
+						<name>trunc_ln24_3</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -864,7 +864,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -875,7 +875,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061497696</coreId>
+						<coreId>824196410</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -901,10 +901,10 @@
 					<Obj>
 						<type>0</type>
 						<id>29</id>
-						<name>xor_ln26_3</name>
+						<name>xor_ln24_3</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -920,7 +920,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -931,7 +931,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>738197632</coreId>
+						<coreId>538976288</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -958,7 +958,7 @@
 						<name>temp</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>26</lineNumber>
+						<lineNumber>24</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -974,7 +974,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>26</second>
+										<second>24</second>
 									</item>
 								</second>
 							</item>
@@ -985,7 +985,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>808542035</coreId>
+						<coreId>1396144496</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1015,7 +1015,7 @@
 						<name>out_r_addr</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>29</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -1031,7 +1031,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>29</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -1042,9 +1042,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1701669236</coreId>
+						<coreId>370147520</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1067,10 +1067,10 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>out_r_addr_write_ln29</name>
+						<name>out_r_addr_write_ln27</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>29</lineNumber>
+						<lineNumber>27</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -1086,7 +1086,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>29</second>
+										<second>27</second>
 									</item>
 								</second>
 							</item>
@@ -1097,7 +1097,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1701978146</coreId>
+						<coreId>1330405188</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -1137,7 +1137,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>774905914</coreId>
+						<coreId>1818633248</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -1160,10 +1160,10 @@
 					<Obj>
 						<type>0</type>
 						<id>35</id>
-						<name>_ln32</name>
+						<name>_ln29</name>
 						<fileName>../inverter_hls.cpp</fileName>
 						<fileDirectory>/home/lars/Documents/MPsocGroup/HLSVitis/Project</fileDirectory>
-						<lineNumber>32</lineNumber>
+						<lineNumber>29</lineNumber>
 						<contextFuncName>inverter</contextFuncName>
 						<contextNormFuncName>inverter</contextNormFuncName>
 						<inlineStackInfo>
@@ -1179,7 +1179,7 @@
 											<first>../inverter_hls.cpp</first>
 											<second>inverter</second>
 										</first>
-										<second>32</second>
+										<second>29</second>
 									</item>
 								</second>
 							</item>
@@ -1190,7 +1190,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1179535650</coreId>
+						<coreId>1027350642</coreId>
 					</Obj>
 					<bitwidth>0</bitwidth>
 				</Value>
@@ -1232,9 +1232,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1162363731</coreId>
+						<coreId>976887840</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -1260,9 +1260,9 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>170015544</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -1288,12 +1288,12 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1413947965</coreId>
+						<coreId>1768171602</coreId>
 					</Obj>
-					<bitwidth>17</bitwidth>
+					<bitwidth>15</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>76800</content>
+				<content>25440</content>
 			</item>
 			<item class_id_reference="16" object_id="_27">
 				<Value>
@@ -1316,7 +1316,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1701667182</coreId>
+						<coreId>1394620960</coreId>
 					</Obj>
 					<bitwidth>64</bitwidth>
 				</Value>
@@ -1344,7 +1344,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061439568</coreId>
+						<coreId>1684368999</coreId>
 					</Obj>
 					<bitwidth>8</bitwidth>
 				</Value>
@@ -1372,7 +1372,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1701667182</coreId>
+						<coreId>538976288</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1400,7 +1400,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>1146048607</coreId>
+						<coreId>537534557</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1428,7 +1428,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061508320</coreId>
+						<coreId>1713643635</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1456,7 +1456,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>0</coreId>
+						<coreId>1044</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1484,7 +1484,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061510144</coreId>
+						<coreId>379001600</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1512,7 +1512,7 @@
 						<opType></opType>
 						<implIndex></implIndex>
 						<coreName></coreName>
-						<coreId>4061511320</coreId>
+						<coreId>538976288</coreId>
 					</Obj>
 					<bitwidth>32</bitwidth>
 				</Value>
@@ -1602,7 +1602,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>0</coreId>
+					<coreId>370034288</coreId>
 				</Obj>
 				<node_objs>
 					<count>15</count>
@@ -1644,7 +1644,7 @@
 					<opType></opType>
 					<implIndex></implIndex>
 					<coreName></coreName>
-					<coreId>1936683105</coreId>
+					<coreId>1</coreId>
 				</Obj>
 				<node_objs>
 					<count>1</count>
@@ -2024,8 +2024,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>76802</mMinLatency>
-			<mMaxLatency>76802</mMaxLatency>
+			<mMinLatency>25442</mMinLatency>
+			<mMaxLatency>25442</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -2054,8 +2054,8 @@
 		</item>
 		<item class_id_reference="22" object_id="_90">
 			<mId>3</mId>
-			<mTag>VITIS_LOOP_18_1</mTag>
-			<mNormTag>VITIS_LOOP_18_1</mNormTag>
+			<mTag>VITIS_LOOP_16_1</mTag>
+			<mNormTag>VITIS_LOOP_16_1</mNormTag>
 			<mType>1</mType>
 			<sub_regions>
 				<count>0</count>
@@ -2069,10 +2069,10 @@
 			</basic_blocks>
 			<mII>1</mII>
 			<mDepth>2</mDepth>
-			<mMinTripCount>76800</mMinTripCount>
-			<mMaxTripCount>76800</mMaxTripCount>
-			<mMinLatency>76800</mMinLatency>
-			<mMaxLatency>76800</mMaxLatency>
+			<mMinTripCount>25440</mMinTripCount>
+			<mMaxTripCount>25440</mMaxTripCount>
+			<mMinLatency>25440</mMinLatency>
+			<mMaxLatency>25440</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -2289,7 +2289,7 @@
 		<count>1</count>
 		<item_version>0</item_version>
 		<item class_id="33" tracking_level="1" version="0" object_id="_92">
-			<region_name>VITIS_LOOP_18_1</region_name>
+			<region_name>VITIS_LOOP_16_1</region_name>
 			<basic_blocks>
 				<count>2</count>
 				<item_version>0</item_version>

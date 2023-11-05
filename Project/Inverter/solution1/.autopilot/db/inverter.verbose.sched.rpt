@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'inverter'
 ================================================================
-* Date:           Fri Nov  3 09:49:11 2023
+* Date:           Sun Nov  5 14:18:16 2023
 
 * Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
 * Project:        Inverter
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
     |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
     +---------+---------+----------+----------+-------+-------+---------+
-    |    76802|    76802|  0.768 ms|  0.768 ms|  76803|  76803|     none|
+    |    25442|    25442|  0.254 ms|  0.254 ms|  25443|  25443|     none|
     +---------+---------+----------+----------+-------+-------+---------+
 
     + Detail: 
@@ -41,7 +41,7 @@
         |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
         |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
         +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- VITIS_LOOP_18_1  |    76800|    76800|         2|          1|          1|  76800|       yes|
+        |- VITIS_LOOP_16_1  |    25440|    25440|         2|          1|          1|  25440|       yes|
         +-------------------+---------+---------+----------+-----------+-----------+-------+----------+
 
 ============================================================
@@ -93,37 +93,37 @@ ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void 
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_r, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_r"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_1, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_2, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.48ns)   --->   "%br_ln18 = br void" [../inverter_hls.cpp:18]   --->   Operation 11 'br' 'br_ln18' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 11 [1/1] (0.48ns)   --->   "%br_ln16 = br void" [../inverter_hls.cpp:16]   --->   Operation 11 'br' 'br_ln16' <Predicate = true> <Delay = 0.48>
 
 State 2 <SV = 1> <Delay = 1.35>
-ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%i = phi i17 0, void, i17 %add_ln18, void %.split" [../inverter_hls.cpp:18]   --->   Operation 12 'phi' 'i' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (1.02ns)   --->   "%add_ln18 = add i17 %i, i17 1" [../inverter_hls.cpp:18]   --->   Operation 13 'add' 'add_ln18' <Predicate = true> <Delay = 1.02> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.02> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 14 [1/1] (0.88ns)   --->   "%icmp_ln18 = icmp_eq  i17 %i, i17 76800" [../inverter_hls.cpp:18]   --->   Operation 14 'icmp' 'icmp_ln18' <Predicate = true> <Delay = 0.88> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 76800, i64 76800, i64 76800"   --->   Operation 15 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln18 = br i1 %icmp_ln18, void %.split, void" [../inverter_hls.cpp:18]   --->   Operation 16 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i17 %i" [../inverter_hls.cpp:18]   --->   Operation 17 'zext' 'zext_ln18' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%in_r_addr = getelementptr i32 %in_r, i64 0, i64 %zext_ln18" [../inverter_hls.cpp:20]   --->   Operation 18 'getelementptr' 'in_r_addr' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_2 : Operation 19 [2/2] (1.35ns)   --->   "%in_r_load = load i17 %in_r_addr" [../inverter_hls.cpp:20]   --->   Operation 19 'load' 'in_r_load' <Predicate = (!icmp_ln18)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 76800> <RAM>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%i = phi i15 0, void, i15 %add_ln16, void %.split" [../inverter_hls.cpp:16]   --->   Operation 12 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.00ns)   --->   "%add_ln16 = add i15 %i, i15 1" [../inverter_hls.cpp:16]   --->   Operation 13 'add' 'add_ln16' <Predicate = true> <Delay = 1.00> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.86ns)   --->   "%icmp_ln16 = icmp_eq  i15 %i, i15 25440" [../inverter_hls.cpp:16]   --->   Operation 14 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 25440, i64 25440, i64 25440"   --->   Operation 15 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln16 = br i1 %icmp_ln16, void %.split, void" [../inverter_hls.cpp:16]   --->   Operation 16 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln16 = zext i15 %i" [../inverter_hls.cpp:16]   --->   Operation 17 'zext' 'zext_ln16' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%in_r_addr = getelementptr i32 %in_r, i64 0, i64 %zext_ln16" [../inverter_hls.cpp:18]   --->   Operation 18 'getelementptr' 'in_r_addr' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_2 : Operation 19 [2/2] (1.35ns)   --->   "%in_r_load = load i15 %in_r_addr" [../inverter_hls.cpp:18]   --->   Operation 19 'load' 'in_r_load' <Predicate = (!icmp_ln16)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25440> <RAM>
 
 State 3 <SV = 2> <Delay = 3.09>
-ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln16 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../inverter_hls.cpp:16]   --->   Operation 20 'specpipeline' 'specpipeline_ln16' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln16 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [../inverter_hls.cpp:16]   --->   Operation 21 'specloopname' 'specloopname_ln16' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 22 [1/2] (1.35ns)   --->   "%in_r_load = load i17 %in_r_addr" [../inverter_hls.cpp:20]   --->   Operation 22 'load' 'in_r_load' <Predicate = (!icmp_ln18)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 76800> <RAM>
-ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln26 = trunc i32 %in_r_load" [../inverter_hls.cpp:26]   --->   Operation 23 'trunc' 'trunc_ln26' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 24 [1/1] (0.38ns)   --->   "%xor_ln26 = xor i8 %trunc_ln26, i8 255" [../inverter_hls.cpp:26]   --->   Operation 24 'xor' 'xor_ln26' <Predicate = (!icmp_ln18)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln26_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 8, i32 15" [../inverter_hls.cpp:26]   --->   Operation 25 'partselect' 'trunc_ln26_1' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 26 [1/1] (0.38ns)   --->   "%xor_ln26_1 = xor i8 %trunc_ln26_1, i8 255" [../inverter_hls.cpp:26]   --->   Operation 26 'xor' 'xor_ln26_1' <Predicate = (!icmp_ln18)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln26_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 16, i32 23" [../inverter_hls.cpp:26]   --->   Operation 27 'partselect' 'trunc_ln26_2' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 28 [1/1] (0.38ns)   --->   "%xor_ln26_2 = xor i8 %trunc_ln26_2, i8 255" [../inverter_hls.cpp:26]   --->   Operation 28 'xor' 'xor_ln26_2' <Predicate = (!icmp_ln18)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln26_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 24, i32 31" [../inverter_hls.cpp:26]   --->   Operation 29 'partselect' 'trunc_ln26_3' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 30 [1/1] (0.38ns)   --->   "%xor_ln26_3 = xor i8 %trunc_ln26_3, i8 255" [../inverter_hls.cpp:26]   --->   Operation 30 'xor' 'xor_ln26_3' <Predicate = (!icmp_ln18)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%temp = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %xor_ln26_3, i8 %xor_ln26_2, i8 %xor_ln26_1, i8 %xor_ln26" [../inverter_hls.cpp:26]   --->   Operation 31 'bitconcatenate' 'temp' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%out_r_addr = getelementptr i32 %out_r, i64 0, i64 %zext_ln18" [../inverter_hls.cpp:29]   --->   Operation 32 'getelementptr' 'out_r_addr' <Predicate = (!icmp_ln18)> <Delay = 0.00>
-ST_3 : Operation 33 [1/1] (1.35ns)   --->   "%store_ln29 = store i32 %temp, i17 %out_r_addr" [../inverter_hls.cpp:29]   --->   Operation 33 'store' 'store_ln29' <Predicate = (!icmp_ln18)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 76800> <RAM>
-ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 34 'br' 'br_ln0' <Predicate = (!icmp_ln18)> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specpipeline_ln14 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../inverter_hls.cpp:14]   --->   Operation 20 'specpipeline' 'specpipeline_ln14' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln14 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [../inverter_hls.cpp:14]   --->   Operation 21 'specloopname' 'specloopname_ln14' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 22 [1/2] (1.35ns)   --->   "%in_r_load = load i15 %in_r_addr" [../inverter_hls.cpp:18]   --->   Operation 22 'load' 'in_r_load' <Predicate = (!icmp_ln16)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25440> <RAM>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln24 = trunc i32 %in_r_load" [../inverter_hls.cpp:24]   --->   Operation 23 'trunc' 'trunc_ln24' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.38ns)   --->   "%xor_ln24 = xor i8 %trunc_ln24, i8 255" [../inverter_hls.cpp:24]   --->   Operation 24 'xor' 'xor_ln24' <Predicate = (!icmp_ln16)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln24_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 8, i32 15" [../inverter_hls.cpp:24]   --->   Operation 25 'partselect' 'trunc_ln24_1' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.38ns)   --->   "%xor_ln24_1 = xor i8 %trunc_ln24_1, i8 255" [../inverter_hls.cpp:24]   --->   Operation 26 'xor' 'xor_ln24_1' <Predicate = (!icmp_ln16)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln24_2 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 16, i32 23" [../inverter_hls.cpp:24]   --->   Operation 27 'partselect' 'trunc_ln24_2' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.38ns)   --->   "%xor_ln24_2 = xor i8 %trunc_ln24_2, i8 255" [../inverter_hls.cpp:24]   --->   Operation 28 'xor' 'xor_ln24_2' <Predicate = (!icmp_ln16)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln24_3 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %in_r_load, i32 24, i32 31" [../inverter_hls.cpp:24]   --->   Operation 29 'partselect' 'trunc_ln24_3' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.38ns)   --->   "%xor_ln24_3 = xor i8 %trunc_ln24_3, i8 255" [../inverter_hls.cpp:24]   --->   Operation 30 'xor' 'xor_ln24_3' <Predicate = (!icmp_ln16)> <Delay = 0.38> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.38> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%temp = bitconcatenate i32 @_ssdm_op_BitConcatenate.i32.i8.i8.i8.i8, i8 %xor_ln24_3, i8 %xor_ln24_2, i8 %xor_ln24_1, i8 %xor_ln24" [../inverter_hls.cpp:24]   --->   Operation 31 'bitconcatenate' 'temp' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%out_r_addr = getelementptr i32 %out_r, i64 0, i64 %zext_ln16" [../inverter_hls.cpp:27]   --->   Operation 32 'getelementptr' 'out_r_addr' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.35ns)   --->   "%store_ln27 = store i32 %temp, i15 %out_r_addr" [../inverter_hls.cpp:27]   --->   Operation 33 'store' 'store_ln27' <Predicate = (!icmp_ln16)> <Delay = 1.35> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25440> <RAM>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln0 = br void"   --->   Operation 34 'br' 'br_ln0' <Predicate = (!icmp_ln16)> <Delay = 0.00>
 
 State 4 <SV = 2> <Delay = 0.00>
-ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln32 = ret" [../inverter_hls.cpp:32]   --->   Operation 35 'ret' 'ret_ln32' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%ret_ln29 = ret" [../inverter_hls.cpp:29]   --->   Operation 35 'ret' 'ret_ln29' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -133,19 +133,19 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
 
  <State 1>: 0.489ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('i', ../inverter_hls.cpp:18) with incoming values : ('add_ln18', ../inverter_hls.cpp:18) [11]  (0.489 ns)
+	multiplexor before 'phi' operation ('i', ../inverter_hls.cpp:16) with incoming values : ('add_ln16', ../inverter_hls.cpp:16) [11]  (0.489 ns)
 
  <State 2>: 1.35ns
 The critical path consists of the following:
-	'phi' operation ('i', ../inverter_hls.cpp:18) with incoming values : ('add_ln18', ../inverter_hls.cpp:18) [11]  (0 ns)
-	'getelementptr' operation ('in_r_addr', ../inverter_hls.cpp:20) [20]  (0 ns)
-	'load' operation ('in_r_load', ../inverter_hls.cpp:20) on array 'in_r' [21]  (1.35 ns)
+	'phi' operation ('i', ../inverter_hls.cpp:16) with incoming values : ('add_ln16', ../inverter_hls.cpp:16) [11]  (0 ns)
+	'getelementptr' operation ('in_r_addr', ../inverter_hls.cpp:18) [20]  (0 ns)
+	'load' operation ('in_r_load', ../inverter_hls.cpp:18) on array 'in_r' [21]  (1.35 ns)
 
  <State 3>: 3.09ns
 The critical path consists of the following:
-	'load' operation ('in_r_load', ../inverter_hls.cpp:20) on array 'in_r' [21]  (1.35 ns)
-	'xor' operation ('xor_ln26', ../inverter_hls.cpp:26) [23]  (0.389 ns)
-	'store' operation ('store_ln29', ../inverter_hls.cpp:29) of variable 'temp', ../inverter_hls.cpp:26 on array 'out_r' [32]  (1.35 ns)
+	'load' operation ('in_r_load', ../inverter_hls.cpp:18) on array 'in_r' [21]  (1.35 ns)
+	'xor' operation ('xor_ln24_2', ../inverter_hls.cpp:24) [27]  (0.389 ns)
+	'store' operation ('store_ln27', ../inverter_hls.cpp:27) of variable 'temp', ../inverter_hls.cpp:24 on array 'out_r' [32]  (1.35 ns)
 
  <State 4>: 0ns
 The critical path consists of the following:

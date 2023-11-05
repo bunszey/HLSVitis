@@ -1,16 +1,14 @@
 #include <stdint.h>
 
-#define DATA_SIZE 76800 //640x480=307200bytes /4bytesprword = 76800
+//424x240=101760bytes
+//101760bytes/4bytesprword = 25440
+#define DATA_SIZE 25440
 
 // Function to perform vector addition
 void inverter(volatile int in_r[DATA_SIZE], volatile int out_r[DATA_SIZE]) {
-    #pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
+	#pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
 	#pragma HLS INTERFACE bram port=in_r
 	#pragma HLS INTERFACE bram port=out_r
-    //#pragma HLS INTERFACE s_axilite port=in_r bundle=AXI_CPU
-    //#pragma HLS INTERFACE s_axilite port=out_r bundle=AXI_CPU
-
-
 
     // Add the vectors
 	int i, j;
@@ -28,5 +26,4 @@ void inverter(volatile int in_r[DATA_SIZE], volatile int out_r[DATA_SIZE]) {
 
         out_r[i] = temp;
     }
-
 }

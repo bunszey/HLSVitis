@@ -6,7 +6,7 @@
         <DownStreamTool name="vivado"/>
     </downStreamTool>
     <config>
-        <config_export format="ip_catalog" output="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip" rtl="vhdl"/>
+        <config_export format="ip_catalog" output="/home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip" rtl="vhdl"/>
     </config>
     <UIConfigurations>
         <UIAutosynConf boardInfo="Ultra96v2 Evaluation Platform (xczu3eg-sbva484-1-e) " hideTrivialOp="true" isBasedOnBoard="true" isSolutionDirty="false" isStopAskAgain="false" showDetailDesignViewer="false">
@@ -40,7 +40,7 @@
             </RTLs>
         </UIAutoSimConf>
     </UIConfigurations>
-    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/jonas/SDU/1_semester/embedded_systems/Projekts/HLSVitis/Project/inverter.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
+    <ExportDesign askAgain="true" evaluate="false" flow="false" flowChoice="syn" formatName="ip_catalog" output="/home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip" rtl="verilog" rtlButton="true" rtlCombo="vhdl">
         <Format formatName="ip_catalog" description="" vendor="" library="" ipname="inverter" version="" display_name="" taxonomy=""/>
         <Format formatName="sysgen"/>
         <Format formatName="sysgen_ise"/>
