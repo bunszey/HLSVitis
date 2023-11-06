@@ -1,6 +1,7 @@
 {"sourceFile": [{
       "name": "",
-      "directive": [{
+      "directive": [
+        {
           "functionName": "inverter",
           "label": "",
           "functionLabel": "",
@@ -11,5 +12,18 @@
                 "value": "inverter"
               }]
           }
-        }]
+        },
+        {
+          "functionName": "inverter",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "inverter"
+              }]
+          }
+        }
+      ]
     }]}

@@ -6,12 +6,13 @@
 open_project Inverter
 set_top inverter
 add_files ../inverter_hls.cpp
-add_files -tb ../inverter_hls_tb.cpp
+add_files -tb ../inverter_hls_tb.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1" -flow_target vivado
 set_part {xczu3eg-sbva484-1-e}
 create_clock -period 10 -name default
-#source "./Inverter/solution1/directives.tcl"
+config_export -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip -rtl vhdl
+source "./Inverter/solution1/directives.tcl"
 csim_design
 csynth_design
 cosim_design
-export_design -format ip_catalog
+export_design -rtl vhdl -format ip_catalog -output /home/lars/Documents/MPsocGroup/HLSVitis/Project/inverter.zip

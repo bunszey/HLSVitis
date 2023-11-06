@@ -375,18 +375,30 @@ typedef __uintmax_t uintmax_t;
 
 
 
-__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile unsigned char in[307200], volatile unsigned char out[307200]) {_ssdm_SpecArrayDimSize(in, 307200);_ssdm_SpecArrayDimSize(out, 307200);
+
+
+__attribute__((sdx_kernel("inverter", 0))) void inverter(volatile int in_r[25440], volatile int out_r[25440]) {_ssdm_SpecArrayDimSize(in_r, 25440);_ssdm_SpecArrayDimSize(out_r, 25440);
 #pragma HLS TOP name=inverter
-# 6 "../inverter_hls.cpp"
+# 8 "../inverter_hls.cpp"
 
 #pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
-#pragma HLS INTERFACE s_axilite port=in bundle=AXI_CPU
-#pragma HLS INTERFACE s_axilite port=out bundle=AXI_CPU
+#pragma HLS INTERFACE bram port=in_r
+#pragma HLS INTERFACE bram port=out_r
 
 
- VITIS_LOOP_12_1: for (int i = 0; i < 307200; i++) {
-#pragma HLS UNROLL factor=500
- out[i] = 255 - in[i];
+ int i, j;
+
+    VITIS_LOOP_16_1: for (i = 0; i < 25440; ++i) {
+#pragma HLS PIPELINE
+ int temp = in_r[i];
+
+     unsigned char* bytes = (unsigned char*)&temp;
+
+     VITIS_LOOP_22_2: for(j = 0; j < 4; ++j){
+#pragma HLS UNROLL factor=4
+ bytes[j] = 255 - bytes[j];
+     }
+
+        out_r[i] = temp;
     }
-
 }

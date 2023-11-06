@@ -15,36 +15,44 @@
     "Triple": "fpga64-xilinx-none"
   },
   "Args": {
-    "in": {
+    "in_r": {
       "index": "0",
       "direction": "in",
       "srcType": "*",
-      "srcSize": "8",
+      "srcSize": "32",
       "hwRefs": [{
-          "type": "memory",
-          "interface": "s_axi_AXI_CPU",
-          "name": "in_r",
+          "type": "interface",
+          "interface": "in_r_PORTA",
+          "name": "",
           "usage": "data",
-          "direction": "in"
+          "direction": "out"
         }]
     },
-    "out": {
+    "out_r": {
       "index": "1",
       "direction": "out",
       "srcType": "*",
-      "srcSize": "8",
+      "srcSize": "32",
       "hwRefs": [{
-          "type": "memory",
-          "interface": "s_axi_AXI_CPU",
-          "name": "out_r",
+          "type": "interface",
+          "interface": "out_r_PORTA",
+          "name": "",
           "usage": "data",
-          "direction": "in"
+          "direction": "out"
         }]
     }
   },
   "HlsSolution": {
     "FlowTarget": "vivado",
-    "DirectiveTcl": ["set_directive_top inverter -name inverter"],
+    "ConfigTcl": [
+      "config_export -format=ip_catalog",
+      "config_export -output=\/home\/lars\/Documents\/MPsocGroup\/HLSVitis\/Project\/inverter.zip",
+      "config_export -rtl=vhdl"
+    ],
+    "DirectiveTcl": [
+      "set_directive_top inverter -name inverter",
+      "set_directive_top inverter -name inverter"
+    ],
     "ProfileOption": "0",
     "ProfileType": "none",
     "KernelName": "inverter"
@@ -55,7 +63,7 @@
     "Uncertainty": "2.7",
     "IsCombinational": "0",
     "II": "x",
-    "Latency": "307815"
+    "Latency": "25442"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
   "Ipx": {
@@ -120,6 +128,43 @@
       "portMap": {"ap_rst_n": "RST"},
       "ports": ["ap_rst_n"]
     },
+    "in_r_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "in_r_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_WIDTH": "32",
+        "MEM_SIZE": "4"
+      },
+      "portMap": {
+        "in_r_Addr_A": "ADDR",
+        "in_r_EN_A": "EN",
+        "in_r_WEN_A": "WE",
+        "in_r_Din_A": "DIN",
+        "in_r_Dout_A": "DOUT",
+        "in_r_Clk_A": "CLK",
+        "in_r_Rst_A": "RST"
+      },
+      "ports": [
+        "in_r_Addr_A",
+        "in_r_Clk_A",
+        "in_r_Din_A",
+        "in_r_Dout_A",
+        "in_r_EN_A",
+        "in_r_Rst_A",
+        "in_r_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "in_r"
+        }]
+    },
     "interrupt": {
       "type": "interrupt",
       "busTypeName": "interrupt",
@@ -129,12 +174,49 @@
       "portMap": {"interrupt": "INTERRUPT"},
       "ports": ["interrupt"]
     },
+    "out_r_PORTA": {
+      "type": "bram",
+      "busTypeName": "bram",
+      "mode": "master",
+      "dataWidth": "32",
+      "addrWidth": "32",
+      "portPrefix": "out_r_",
+      "busParams": {
+        "MASTER_TYPE": "BRAM_CTRL",
+        "MEM_WIDTH": "32",
+        "MEM_SIZE": "4"
+      },
+      "portMap": {
+        "out_r_Addr_A": "ADDR",
+        "out_r_EN_A": "EN",
+        "out_r_WEN_A": "WE",
+        "out_r_Din_A": "DIN",
+        "out_r_Dout_A": "DOUT",
+        "out_r_Clk_A": "CLK",
+        "out_r_Rst_A": "RST"
+      },
+      "ports": [
+        "out_r_Addr_A",
+        "out_r_Clk_A",
+        "out_r_Din_A",
+        "out_r_Dout_A",
+        "out_r_EN_A",
+        "out_r_Rst_A",
+        "out_r_WEN_A"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "bram",
+          "register_option": "0",
+          "argName": "out_r"
+        }]
+    },
     "s_axi_AXI_CPU": {
       "type": "axi4lite",
       "busTypeName": "aximm",
       "mode": "slave",
       "dataWidth": "32",
-      "addrWidth": "21",
+      "addrWidth": "4",
       "portPrefix": "s_axi_AXI_CPU_",
       "paramPrefix": "C_S_AXI_AXI_CPU_",
       "ports": [
@@ -156,16 +238,6 @@
         "s_axi_AXI_CPU_WSTRB",
         "s_axi_AXI_CPU_WVALID"
       ],
-      "memories": {
-        "in_r": {
-          "offset": "524288",
-          "range": "524288"
-        },
-        "out_r": {
-          "offset": "1048576",
-          "range": "524288"
-        }
-      },
       "registers": [
         {
           "offset": "0x00",
@@ -327,14 +399,7 @@
             }
           ]
         }
-      ],
-      "constraints": [{
-          "constraint_type": "pragma interface",
-          "mode": "s_axilite",
-          "register_option": "0",
-          "offset": "524288",
-          "argName": "in"
-        }]
+      ]
     }
   },
   "RtlPorts": {
@@ -348,7 +413,7 @@
     },
     "s_axi_AXI_CPU_AWADDR": {
       "dir": "in",
-      "width": "21"
+      "width": "4"
     },
     "s_axi_AXI_CPU_WVALID": {
       "dir": "in",
@@ -376,7 +441,7 @@
     },
     "s_axi_AXI_CPU_ARADDR": {
       "dir": "in",
-      "width": "21"
+      "width": "4"
     },
     "s_axi_AXI_CPU_RVALID": {
       "dir": "out",
@@ -417,6 +482,62 @@
     "interrupt": {
       "dir": "out",
       "width": "1"
+    },
+    "in_r_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "in_r_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_r_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "in_r_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "in_r_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "in_r_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_r_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_r_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "out_r_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_r_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "out_r_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "out_r_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "out_r_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_r_Rst_A": {
+      "dir": "out",
+      "width": "1"
     }
   },
   "ModuleInfo": {
@@ -430,10 +551,10 @@
       }},
     "Metrics": {"inverter": {
         "Latency": {
-          "LatencyBest": "307815",
-          "LatencyAvg": "307815",
-          "LatencyWorst": "307815",
-          "PipelineII": "307816",
+          "LatencyBest": "25442",
+          "LatencyAvg": "25442",
+          "LatencyWorst": "25442",
+          "PipelineII": "25443",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -443,22 +564,22 @@
           "Estimate": "3.093"
         },
         "Loops": [{
-            "Name": "VITIS_LOOP_12_1",
-            "TripCount": "614",
-            "Latency": "307814",
-            "PipelineII": "",
-            "PipelineDepth": "501"
+            "Name": "VITIS_LOOP_16_1",
+            "TripCount": "25440",
+            "Latency": "25440",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
           }],
         "Area": {
-          "BRAM_18K": "512",
+          "BRAM_18K": "0",
           "AVAIL_BRAM": "432",
-          "UTIL_BRAM": "118",
-          "FF": "10232",
+          "UTIL_BRAM": "0",
+          "FF": "72",
           "AVAIL_FF": "141120",
-          "UTIL_FF": "7",
-          "LUT": "21106",
+          "UTIL_FF": "~0",
+          "LUT": "162",
           "AVAIL_LUT": "70560",
-          "UTIL_LUT": "29",
+          "UTIL_LUT": "~0",
           "DSP": "0",
           "AVAIL_DSP": "360",
           "UTIL_DSP": "0",
@@ -471,7 +592,7 @@
   "GenerateBdFiles": "0",
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2023-11-02 08:56:40 CET",
+    "Time": "2023-11-05 14:18:17 CET",
     "ToolName": "vivado_hls",
     "ToolVersion": "2020.2"
   }
